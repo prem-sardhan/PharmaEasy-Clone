@@ -1,13 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-import {Home} from "./LokeshPages/Home";
+
+import Mainroutes from './Routes/Mainroutes';
+
+
+
 
 
 
 function App() {
   return (
-    <div className="App" >
-     <Home/>
+    <div className="App">
+     <Mainroutes/>
+     
+     
     </div>
   );
 }

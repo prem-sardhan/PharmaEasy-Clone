@@ -1,9 +1,12 @@
+import "./card.css";
+
 const Card = ({ ele,displayProp="grid" }) => {
     console.log(displayProp)
     
   return (
     <div style={{  marginTop: "20px" ,display:`${displayProp} `}}>
       <div
+      id="card-img-div"
         style={{
           boxShadow:
             "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
