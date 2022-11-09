@@ -942,6 +942,12 @@
         }
       ]
     },
+
+
+
+
+
+    
     "LiveEasySearch": [
       {
         "entityType": 2,
@@ -3097,5 +3103,253 @@
           ]
         }
       ]
+      , "Skin Care":[
+    {
+        "title":"Venusia Max Intensive Moisturizing Lotion, Repairs Dry Skin, Provides Soft & Smooth Skin, 300gm",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/263100/venusia-max-intensive-moisturizing-lotion-repairs-dry-skin-provides-soft-smooth-skin-300gm-2-1645786251.jpg",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/263100/venusia-max-intensive-moisturizing-lotion-repairs-dry-skin-provides-soft-smooth-skin-300gm-6.1-1645786158.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/263100/venusia-max-intensive-moisturizing-lotion-repairs-dry-skin-provides-soft-smooth-skin-300gm-6.2-1645786155.jpg",
+        "mrp":427.07        ,
+        "strike":500,
+        "discount":73,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal","Face Wipes"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Ethiglo Skin Whitening Face Wash-70 Gm",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/245780/ethiglo-skin-whitening-face-wash-70-gm-1-1641398620.jpg",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/245780/ethiglo-skin-whitening-face-wash-70-gm-2-1654078683.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/245780/ethiglo-skin-whitening-face-wash-70-gm-3-1654078127.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":180,
+        "strike":200,
+        "discount":20,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal","Face Wipes"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Episoft Cleansing Lotion 250ml",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/273329/episoft-cleansing-lotion-250ml-2-1641398639.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/273329/episoft-cleansing-lotion-250ml-6.1-1641398642.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/273329/episoft-cleansing-lotion-250ml-7-1641398638.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":400,
+        "strike":500,
+        "discount":100,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Veet Pure Hair Removal Cream For Women With No Ammonia Smell, Sensitive Skin - 50 G",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/I40181/veet-pure-hair-removal-cream-for-women-with-no-ammonia-smell-sensitive-skin-50-g-2-1656923330.jpg",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/I40181/veet-pure-hair-removal-cream-for-women-with-no-ammonia-smell-sensitive-skin-50-g-6.1-1656923502.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/I40181/veet-pure-hair-removal-cream-for-women-with-no-ammonia-smell-sensitive-skin-50-g-6.2-1656923552.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":120,
+        "strike":135,
+        "discount":15,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Nivea Aloe Mosturizing Creme Bottle Of 200 Ml",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/I40908/nivea-aloe-mosturizing-creme-bottle-of-200-ml-2-1654251202.jpg",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/I40908/nivea-aloe-mosturizing-creme-bottle-of-200-ml-3-1654251081.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/I40908/nivea-aloe-mosturizing-creme-bottle-of-200-ml-6.1-1641788074.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":255,
+        "strike":300,
+        "discount":45,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"La Shield Fisico Sunscreen Spf 50 Matte Tube Of 50 G",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/239792/la-shield-spf-40-sunscreen-gel-50gm-2-1655119017.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/O15703/la-shield-fisico-sunscreen-spf-50-matte-tube-of-50-g-6.1-1655118974.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/O15703/la-shield-fisico-sunscreen-spf-50-matte-tube-of-50-g-6.4-1655118889.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":504,
+        "strike":630,
+        "discount":126,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Dettol Intense Cool Bathing Soap Bar With Menthol- Buy 4 Get 1 Free - 125g Each",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/R85254/dettol-intense-cool-bathing-soap-bar-with-menthol-buy-4-get-1-free-125g-each-2-1656923385.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/R85254/dettol-intense-cool-bathing-soap-bar-with-menthol-buy-4-get-1-free-125g-each-6.1-1656923359.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/R85254/dettol-intense-cool-bathing-soap-bar-with-menthol-buy-4-get-1-free-125g-each-6.6-1656923378.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":250,
+        "strike":300,
+        "discount":50,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Lacto Calamine Daily Cleansing Face Wipes With Aloe Vera Cucumber And Vitamin E - 25 Wipes",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/S78152/lacto-calamine-daily-cleansing-face-wipes-with-aloe-vera-cucumber-and-vitamin-e-25-wipes-2-1649841683.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/S78152/lacto-calamine-daily-cleansing-face-wipes-with-aloe-vera-cucumber-and-vitamin-e-25-wipes-6.1-1649841745.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/S78152/lacto-calamine-daily-cleansing-face-wipes-with-aloe-vera-cucumber-and-vitamin-e-25-wipes-6.2-1649841685.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":66,
+        "strike":150,
+        "discount":84,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal","Face Wipes"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Baby Dove Rich Moisture Wipes 50 Pcs",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/I07151/baby-dove-rich-moisture-wipes-50-pcs-2-1641787610.jpg",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/I07151/baby-dove-rich-moisture-wipes-50-pcs-6.1-1641787609.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/I07151/baby-dove-rich-moisture-wipes-50-pcs-6.2-1641787610.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":122,
+        "strike":135,
+        "discount":13,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal","Face Wipes"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"D Acne Soft Foaming Face Wash Tube Of 100 G",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/I07034/fash-x-gel-face-wash-200gm-2-1654167900.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/I07034/fash-x-gel-face-wash-200gm-3-1654167869.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/I07034/fash-x-gel-face-wash-200gm-7-1654168030.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":350,
+        "strike":475,
+        "discount":35,
+        "ancestor":["All Categories","Skin Care","Skin Creams & Hair Removal","Face Wipes"],
+        "brand":"N/A",
+        "instock":true
+    }
+        ],
+
+
+
+    "Home Care":[
+    {
+        "title":"Dettol Antiseptic Liquid Bottle Of 550 Ml",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/I40695/dettol-antiseptic-liquid-bottle-of-550-ml-2-1656923531.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/I40695/dettol-antiseptic-liquid-bottle-of-550-ml-6.1-1656923485.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/I40695/dettol-antiseptic-liquid-bottle-of-550-ml-6.2-1656923443.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":180.98,
+        "strike":194.6,
+        "discount":13.62,
+        "ancestor":["All Categories","Home Care"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Godrej Good Knight Gold Flash Mosquito Repellent (Machine + 2 Refills) - Combo Pack-1 Unit",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/G48731/godrej-good-knight-gold-flash-mosquito-repellent-machine-2-refills-combo-pack-1-unit-1-1641794003.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/G48731/godrej-good-knight-gold-flash-mosquito-repellent-machine-2-refills-combo-pack-1-unit-3-1641793992.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/G48731/godrej-good-knight-gold-flash-mosquito-repellent-machine-2-refills-combo-pack-1-unit-6.1-1641794006.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":160,
+        "strike":200,
+        "discount":40,
+        "ancestor":["All Categories","Home Care"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Lizol Floral Disinfectant Floor Cleaner Liquid Bottle Of 200 Ml",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/Q82571/lizol-floral-disinfectant-floor-cleaner-liquid-bottle-of-200-ml-2-1653995428.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/Q82571/lizol-floral-disinfectant-floor-cleaner-liquid-bottle-of-200-ml-6.1-1653995449.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/Q82571/lizol-floral-disinfectant-floor-cleaner-liquid-bottle-of-200-ml-6.10-1653995436.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":400,
+        "strike":500,
+        "discount":100,
+        "ancestor":["All Categories","Home Care"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Harpic Lemon Bathroom Cleaner Bottle Of 500 Ml",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/V90385/harpic-lemon-bathroom-cleaner-bottle-of-500-ml-2-1641792574.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/V90385/harpic-lemon-bathroom-cleaner-bottle-of-500-ml-6.1-1641792567.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/V90385/harpic-lemon-bathroom-cleaner-bottle-of-500-ml-6.2-1641792569.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":96.03,
+        "strike":99,
+        "discount":2.97,
+        "ancestor":["All Categories","Home Care","Disinfectants"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Domex Disinfectant Expert Toilet Cleaner - 500 Ml",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/A27923/domex-disinfectant-expert-toilet-cleaner-500-ml-2-1643435689.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/A27923/domex-disinfectant-expert-toilet-cleaner-500-ml-6.2-1643435691.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/A27923/domex-disinfectant-expert-toilet-cleaner-500-ml-6.2-1643435691.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":97.02,
+        "strike":98,
+        "discount":1.8,
+        "ancestor":["All Categories","Home Care","Disinfectants"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/J50288/luxor-nano-mobile-disinfectant-cleaner-10ml-on-the-go-2-1641790364.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/J50288/luxor-nano-mobile-disinfectant-cleaner-10ml-on-the-go-6.1-1641790354.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/J50288/luxor-nano-mobile-disinfectant-cleaner-10ml-on-the-go-6.2-1641790368.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":70,
+        "strike":100,
+        "discount":30,
+        "ancestor":["All Categories","Home Care","Disinfectants"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Dettol Liquid Disinfectant For Floor Cleaner, Surface Disinfection Personal Hygiene Lime Fresh 500ml",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/I40097/dettol-liquid-disinfectant-for-floor-cleaner-surface-disinfection-personal-hygiene-lime-fresh-500ml-2-1654166123.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/I40097/dettol-liquid-disinfectant-for-floor-cleaner-surface-disinfection-personal-hygiene-lime-fresh-500ml-3-1654166132.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/I40097/dettol-liquid-disinfectant-for-floor-cleaner-surface-disinfection-personal-hygiene-lime-fresh-500ml-6.1-1641788112.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":173.7,
+        "strike":193,
+        "discount":19.3,
+        "ancestor":["All Categories","Home Care","Skin Creams & Hair Removal","Home Hygiene Essentials"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Dettol Disinfectant Sanitizer Spray Bottle -Spring Blossom, 225ml)",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/O35200/dettol-disinfectant-sanitizer-spray-bottle-spring-blossom-225ml-2-1654234201.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/O35200/dettol-disinfectant-sanitizer-spray-bottle-spring-blossom-225ml-3-1654234069.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/O35200/dettol-disinfectant-sanitizer-spray-bottle-spring-blossom-225ml-6.1-1641793422.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":135.15,
+        "strike":159,
+        "discount":23.85,
+        "ancestor":["All Categories","Home Care"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Tri-Activ Disinfectant Spray For Multi-Surfaces 70% Alcohol Based - 100ml",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/J56493/tri-activ-disinfectant-spray-for-multi-surfaces-70-alcohol-based-100ml-2-1641789235.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/J56493/tri-activ-disinfectant-spray-for-multi-surfaces-70-alcohol-based-100ml-3-1641789239.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/J56493/tri-activ-disinfectant-spray-for-multi-surfaces-70-alcohol-based-100ml-6.1-1641789243.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":63.36,
+        "strike":99,
+        "discount":35.64,
+        "ancestor":["All Categories","Home Care"],
+        "brand":"N/A",
+        "instock":true
+    },
+    {
+        "title":"Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
+        "img1":"https://cdn01.pharmeasy.in/dam/products_otc/E89642/ezee-bio-degradable-large-garbage-bags-24-x-32-inches-packet-of-15-1-1641788762.jpg?dim=320x320&dpr=1&q=100",
+        "img2":"https://cdn01.pharmeasy.in/dam/products_otc/E89642/ezee-bio-degradable-large-garbage-bags-24-x-32-inches-packet-of-15-2-1641788763.jpg?dim=100x0&dpr=1&q=100",
+        "img3":"https://cdn01.pharmeasy.in/dam/products_otc/E89642/ezee-bio-degradable-large-garbage-bags-24-x-32-inches-packet-of-15-4-1641788769.jpg?dim=100x0&dpr=1&q=100",
+        "mrp":77.22,
+        "strike":99,
+        "discount":21.78,
+        "ancestor":["All Categories","Home Care"],
+        "brand":"N/A",
+        "instock":true
+    }
+        ]
+
     }
   }
