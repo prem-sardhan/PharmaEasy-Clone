@@ -7,6 +7,7 @@ import Category from './Abhay_components/Category';
 import { Box } from '@chakra-ui/react';
 
 import Mainroutes from './Routes/Mainroutes';
+import { Navbar } from './Prem/Nav_Components/Navbar';
 
 
 
@@ -20,6 +21,7 @@ function App() {
 
 
     <div className="App">
+     
      <Mainroutes/>
      
      
