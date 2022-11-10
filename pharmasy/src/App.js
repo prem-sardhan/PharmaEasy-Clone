@@ -8,7 +8,7 @@ import { Box } from '@chakra-ui/react';
 
 import Mainroutes from './Routes/Mainroutes';
 import { Navbar } from './Prem/Nav_Components/Navbar';
-import {Healthcare}  from './Ankita_Components/Healthcare/Healthcare';
+
 
 
 
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
      
      <Mainroutes/>
-     {/* <Healthcare/> */}
+     
    
      
 
