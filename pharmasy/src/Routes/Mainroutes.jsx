@@ -8,14 +8,7 @@ import LabTest from "../Pages/LabTest/LabTest";
 import OrderMedicines from "../Pages/OrderMedicines/OrderMedicines";
 import RtpcrTest from "../Pages/RtpcrTest/RtpcrTest";
 import { Navbar } from "../Prem/Nav_Components/Navbar";
-
-
-
-
-
-
-
-
+import {Home} from "../LokeshPages/Home";
 
 
 const Mainroutes = () => {
@@ -23,7 +16,7 @@ const Mainroutes = () => {
     <div>
       <Navbar />
       <Routes>
-        {/* <Route path="/" element={<Main />} /> */}
+        <Route path="/" element={<Home />} />
     
         <Route path="/orderMed" element={<OrderMedicines />} />
         <Route path="/HealthCare" element={<HealthCare />} />

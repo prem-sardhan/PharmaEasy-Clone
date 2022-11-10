@@ -1,6 +1,6 @@
 .ShopByConcern-Container{
     display: block;
-    width: 95%;
+    width: 90%;
     margin: auto;
     text-align: left;
 }
@@ -19,6 +19,10 @@
     display: block;
     padding: 2%;
     text-align: center;
+}
+
+.ShopByConcern-Box > div:hover{
+    cursor: pointer;
 }
 
 .ShopByConcern-Box > div > img{
@@ -79,7 +83,8 @@
     
     .ShopByConcern-Box{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        margin: auto;
+        grid-template-columns: repeat(4,1fr);
         padding-bottom: 5%;
         gap: 3%;
     }
@@ -92,9 +97,14 @@
         padding: 2%;
         text-align: center;
     }
+    
+    .ShopByConcern-Box > div > img{
+        width: 80%;
+        border: 0.4px solid black;
+    }
 
     .ShopByConcern-Box > div > p{
-        font-weight: 500;
-        font-size: 15px;
+        font-weight: 600;
+        font-size: 12px;
     }
 }

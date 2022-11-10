@@ -1,30 +1,40 @@
 import { CarouselBox } from "../LokeshComponents/CarouselBox";
-// import { Home_First_Section } from "../LokeshComponents/Home_First_Section";
+import { Home_First_Section } from "../LokeshComponents/Home_First_Section";
 import { FaLock } from "react-icons/fa";
 import { ShopByConcernComponents } from "../LokeshComponents/ShopByConcernComponents";
 import "./Home.css";
 import "../LokeshComponents/HomePage_Navbar.css";
 import { HomePage_Navbar } from "../LokeshComponents/HomePage_Navbar";
+import { Home_unknown_section } from "../LokeshComponents/Home_unknown_section";
+import { PreviouslyBrowsedItems } from "../LokeshComponents/PreviouslyBrowsedItems";
+import { CarouselBox_second } from "../LokeshComponents/CarouselBox_second";
+import "../LokeshComponents/CarouselBox_second.css";
+import { Image_box_first } from "../LokeshComponents/Image_box_first";
+import { Image_box_second } from "../LokeshComponents/Image_box_second";
+import { FrequentlyBookedLabTests } from "../LokeshComponents/FrequentlyBookedLabTests";
+import { Wellness_Essentials_of_the_Week } from "../LokeshComponents/Wellness_Essentials_of_the_Week";
+import { Featured_Brands } from "../LokeshComponents/Featured_Brands";
+import { CarouselBox_Third } from "../LokeshComponents/CarouselBox_third";
+import "../LokeshComponents/CarouselBox_third.css";
+import { Shop_by_Categories } from "../LokeshComponents/Shop_by_Categories";
+import Footer from "../Ankita_Components/Footer/Footer";
+
 
 const Home = () => {
     return (
         <div className="Lokesh-Home-Container">
             <HomePage_Navbar />
-            {/* -----------------------------------------Top_Section_start------------------------------------------ */}
+
             <section className="lokesh_home_top_section">
-
+                <Home_First_Section/>
             </section>
-            {/* -----------------------------------------Top_Section_end------------------------------------------ */}
 
 
-            {/* -------------------------------------------Carousel_section_start------------------------------------------ */}
             <section className='lokesh_home_carousel'>
                 <CarouselBox />
             </section>
-            {/* ----------------------------------------Carousel_section_end------------------------------------------ */}
+            
 
-
-            {/* ---------------------------------------Home_First_Section_Start-------------------------------------- */}
             <section className="lokesh_home_first_section">
                 <p>Offers Just for You</p>
                 <div className="lokesh_home_first-section-grid">
@@ -56,32 +66,19 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            {/* ---------------------------------------Home_First_Section_end-------------------------------------- */}
+            
 
-
-
-            {/* ---------------------------------------Home_Second_Section_Start-------------------------------------- */}
-            <section className="lokesh_home_second_section">
-                <p>Previously Browsed Items</p>
-                <div className="lokesh_home_second-section-reserved-div">
-
-                </div>
+            <section>
+                <PreviouslyBrowsedItems/>
             </section>
-            {/* ---------------------------------------Home_Second_Section_end-------------------------------------- */}
 
 
-            {/* ---------------------------------------Home_Third_Section_Start-------------------------------------- */}
-
-            <section className="lokesh_home_third_section">
-                <p>Previously Browsed Items</p>
-                <div className="lokesh_home_third-section-reserved-div">
-
-                </div>
+            <section className="Home_CarouselBox_second">
+                <p>Payment Offers</p>
+                <CarouselBox_second/>
             </section>
-            {/* ---------------------------------------Home_Third_Section_end-------------------------------------- */}
 
 
-            {/* ---------------------------------------Home_fourth_Section_Start-------------------------------------- */}
             <section className="lokesh_home_fourth_section">
                 <div className="lokesh_home_fourth-section-Box-1">
                     <div className="Home_part-1">
@@ -107,61 +104,50 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            {/* ---------------------------------------Home_fourth_Section_end-------------------------------------- */}
 
-
-            {/* ---------------------------------------Lab Tests by Health Concern start------------------------------------ */}
-
-            <section className="LabTestsbyHealthConcern">
-                <div>
-                    <p>Lab Tests by Health Concern</p>
-                    <div><p>Powered</p><img src="https://assets.pharmeasy.in/apothecary/images/Thyrocare.webp?dim=1440x0" /></div>
-                    <div className="LabTestsbyHealthConcern_Container">
-
-                    </div>
-                </div>
+            <section>
+                <Image_box_first/>
             </section>
-            {/* ---------------------------------------Lab Tests by Health Concern end------------------------------------ */}
 
+            <section>
+                <Shop_by_Categories/>
+            </section>
 
-            {/* ---------------------------------------Shop by Concern start-------------------------------------- */}
+            <section>
+                <FrequentlyBookedLabTests/>
+            </section>
+
+            <section>
+                {/* Shop_by_Categories */}
+                <p className="shop_by_category_carousel"></p>
+                <CarouselBox_Third/>
+            </section>
+
+            <section>
+                <Wellness_Essentials_of_the_Week/>
+            </section>
+
+            <section>
+                <Featured_Brands/>
+            </section>
+
             <section className="ShopByConcern">
                 <ShopByConcernComponents />
             </section>
-            {/* ---------------------------------------Shop by Concern end-------------------------------------- */}
 
-
-
-
-            {/* ------------------------------------Frequently Booked Lab Tests start--------------------------------- */}
-            <section className="FrequentlyBookedLabTests">
-
+            <section>
+                <Image_box_second/>
             </section>
-            {/* ------------------------------------Frequently Booked Lab Tests end--------------------------------- */}
 
+            <section className="FrequentlyBookedLabTests"></section>
 
-            {/* ---------------------------------------Unknown-section start------------------------------------ */}
 
             <section className="home_unknown_section">
-                <div className="home_unknown_section-container">
-                    <div>
-                        <p>Simplifying</p>
-                        <p>Healthcare</p>
-                        <p>Impacting Lives</p>
-                        <p>Download the App for Free</p>
-                        <div className="home_unknown_section-Box">
-                            <div>
-                                <img src="https://assets.pharmeasy.in/apothecary/images/googlePlay.svg?dim=360x0" alt="" />
-                            </div>
-                            <div>
-                                <img src="https://assets.pharmeasy.in/apothecary/images/appStore.svg?dim=360x0" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Home_unknown_section/>
             </section>
-        </div>
+            <Footer/>
 
+        </div>
     );
 }
 

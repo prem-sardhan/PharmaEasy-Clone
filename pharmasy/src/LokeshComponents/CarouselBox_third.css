@@ -1,0 +1,46 @@
+
+.Home_carousel_item_Third{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 2%;
+    padding: 3%;
+    height: auto;
+}
+
+
+.Home_carousel_item_Third img{
+    width: 80%;
+}
+
+.shop_by_category_carousel{
+    font-size: 30px;
+   font-weight: 500;
+   display: block;
+   text-align: left;
+   margin-left: 3%;
+   margin-top: 5%;
+   margin-bottom: 0px;
+}
+ 
+@media all and (min-width: 401px) and (max-width: 750px){
+    .Home_carousel_item_Third{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2%;
+    }
+}
+
+
+@media all and (min-width: 280px) and (max-width: 400px){
+    .Home_carousel_item_Third{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2%;
+    }
+}
+
+@media all and (min-width: 280px) and (max-width: 500px){
+    .Home_carousel_item_second{
+        height: 50px;
+    }
+} 

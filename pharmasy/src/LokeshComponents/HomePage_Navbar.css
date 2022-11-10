@@ -180,7 +180,6 @@
     .navinside{
         display: grid;
         width: 50%;
-        /* border: 1px solid red; */
         height: auto;
         margin-top: 15%;
         grid-template-columns: repeat(1, 1fr);
@@ -220,7 +219,6 @@
         display: grid;
         width: 50%;
         height: 150px;
-        /* border: 1px solid  red; */
         margin-top: 0%;
         grid-template-columns: repeat(1, 1fr);
         padding-top: 1%;
@@ -279,5 +277,8 @@
         transform: rotate(0) translate(0);
         transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
     }
-
+    .mainNavbarBox{
+        display: none;
+     }
+     
 }
