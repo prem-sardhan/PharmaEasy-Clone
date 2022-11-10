@@ -7,6 +7,7 @@ import {BsFacebook,BsInstagram,BsYoutube,BsTwitter} from "react-icons/bs"
 const Footer = () => {
    
   return (
+    //  addfooter logic
     <div className={styles.container}>
         <MediaQuery minWidth={880} maxWidth={2000}>
         <SimpleGrid columns={4} spacing={100}>
