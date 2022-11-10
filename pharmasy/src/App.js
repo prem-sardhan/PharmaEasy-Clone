@@ -1,4 +1,4 @@
-
+import Footer from './Ankita_Components/Footer/Footer';
 import './App.css';
 import CardSlider from './Rohit_components/CardSlide'
 
@@ -23,7 +23,7 @@ function App() {
     <div className="App">
      
      <Mainroutes/>
-     
+   
      
 
     </div>
