@@ -1,5 +1,5 @@
 import { background, border ,Flex,Box } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import { json } from "react-router-dom";
 import "./card.css";
 
@@ -9,13 +9,13 @@ const Card = ({ ele,displayProp="grid" }) => {
 const StoreAtLocalStorage=()=>{
   localStorage.setItem("singleProductdata",JSON.stringify(ele)
 )
-navigate("/singleproduct")
+
 
 }
 
 
   return (
-    <Box
+    <Link  _hover={{}} to="/singleproduct"><Box
     h="300px"
     w="231px"
     padding="20px 10px"
@@ -86,6 +86,7 @@ navigate("/singleproduct")
        </div>
       </div>
     </Box>
+    </Link>
   );
 };
 
