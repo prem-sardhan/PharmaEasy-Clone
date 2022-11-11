@@ -1,0 +1,283 @@
+.lokesh_home_navbar{
+    display: block;
+    width: 100%;
+}
+
+.lokesh_home_navbar > div:first-child{
+    display: block;
+    width: 100%;
+    background-color: aliceblue;
+    padding: 1.6%;
+}
+
+.lokesh_home_navbar > div:last-child{
+    display: block;
+    width: 100%;
+    background-color: #262626;
+    color: white;
+    padding: 1.6%;
+}
+
+.lokesh_home_navbar > div:first-child .lokesh_home_nav_first-section{
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.lokesh_home_navbar > div:first-child .lokesh_home_nav_first-section > div{
+    font-size: 95%;
+    font-weight: 500;
+}
+
+.lokesh_home_navbar > div:last-child .lokesh_home_nav_second-section{
+    display: grid;
+    width: 80%;
+    margin: auto;
+    margin-left: 0%;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.lokesh_home_navbar > div:last-child .lokesh_home_nav_second-section > div{
+    font-size: 95%;
+    font-weight: 500;
+}
+.lokesh_home_navbar > div:last-child .lokesh_home_nav_second-section > div:first-child{
+    font-size: 95%;
+    color: gray;
+    font-weight: 500;
+} 
+.mainNavbarBox{
+   display: none;
+}
+
+
+@media all and (min-width: 951px) and (max-width: 1200px){
+    
+        .lokesh_home_first-section-grid{
+            width: 90%;
+            gap: 2%;
+        }
+        
+        .lokesh_home_first-section-grid > div > div:last-child{
+            font-size: 90%;
+        }
+        
+        .lokesh_home_first-section-grid > div > div > img{
+            width: 100%;
+        }
+        
+        .lokesh_home_first-section-grid > div:last-child > div:first-child{
+            width: 100%;
+        }
+        
+        .lokesh_home_first-section-grid > div:last-child > div:last-child{
+            width: 100%;
+            padding: 0;
+        }
+}    
+
+@media all and (min-width: 551px) and (max-width: 950px){
+    .lokesh_home_navbar > div:first-child .lokesh_home_nav_first-section{
+        width: 90%;
+    }
+
+    .lokesh_home_navbar > div:first-child .lokesh_home_nav_first-section > div{
+        font-size: 60%;
+    }
+
+    .lokesh_home_navbar > div:last-child .lokesh_home_nav_second-section{
+        width: 100%;
+        margin: auto;
+    }
+
+    .lokesh_home_navbar > div:last-child .lokesh_home_nav_second-section > div{
+        font-size: 60%;
+    }
+    .lokesh_home_navbar > div:last-child .lokesh_home_nav_second-section > div:first-child{
+        font-size: 90%;
+    }
+}
+
+@media all and (min-width: 280px) and (max-width: 550px){
+
+    .lokesh_home_navbar{
+        display: none;
+    }
+
+    .mainNavbarBox{
+        z-index: 10;
+        display: flex;
+        width: 100%;
+        top: -1px;
+        padding-bottom: -200px;
+        margin-bottom: -380px;
+        position: fixed;
+    }
+
+    .burgerNav{
+        width: 100%;
+        height: 6em;
+        background-color: black;
+        display: flex;
+        border-bottom: 1px solid white;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    .navlogo{
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+
+    .navlogo > img {
+        width: 15%;
+    }
+
+    .navinside1{
+        width: 100%;
+        margin-right: 0%;
+        margin-top: 3%;
+        color: white;
+        font-size: 20px;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .navinside1 > div > img {
+        width: 35%;
+        margin-top: 3%;
+        padding-right: 5%;
+    }
+
+    .burger-menu{
+        height: 70%;
+        width: 4em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .burger-bar{
+        width: 2.2em;
+        height: 0.3em;
+        background-color: rgb(224, 238, 237);
+        border-radius: 0.5em;
+    }
+
+    .menu{
+        width: 100%;
+        background-color: rgb(7, 7, 7);
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    .navinside{
+        display: grid;
+        width: 50%;
+        /* border: 1px solid red; */
+        height: auto;
+        margin-top: 15%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2%;
+        padding-top: 1%;
+        z-index: 1;
+    }
+
+    .navbarContainer{
+        z-index: 1;
+        background-color: black;
+        position: relative;
+        margin: auto;
+        color: white;
+        width: 99%;
+        margin-right: 1%;
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .navinside > div{
+        color: white;
+        display: block;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 10%;
+        width: 100%;
+        height: fit-content;
+        font-size: 20px;
+        text-align: left;
+        border-bottom-left-radius: 10px;
+    }
+
+    .navinside1{
+        display: grid;
+        width: 50%;
+        height: 150px;
+        /* border: 1px solid  red; */
+        margin-top: 0%;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 1%;
+        z-index: 1;
+    }
+    .navinside1 > div{
+        color: white;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 100%;
+        height: fit-content;
+        font-size: 20px;
+        text-align: right;
+        padding-right: 17%;
+        font-weight: 400;
+        border-bottom-left-radius: 10px;
+    }
+
+    .navinside1 > div:first-child{
+        padding-bottom: 10%;
+        text-align: right;
+        width: 100%;
+    }
+
+    .navinside > div > a,
+    .navinside1 > div > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .hidden{
+        display: none;
+        height: 0px;
+    }
+
+    .visible{
+        display: inherit;
+        height: 100vh;
+    }
+
+    .burger-bar.clicked:nth-child(1){
+        transform: rotate(45deg)  translate(0.75em, 1.25em);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.clicked:nth-child(2){
+        transform: scale(0.1);
+        transition: ease-out 0.5s;
+    }
+    .burger-bar.clicked:nth-child(3){
+        transform: rotate(135deg)  translate(-0.5em, 1em);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.unclicked{
+        transform: rotate(0) translate(0);
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    }
+
+}
