@@ -14,12 +14,12 @@ const FourTest = () => {
   
     
     >
-        <Button border='1px solid black' w={['100%',"25%","20%",'20%']}   fontSize={['15px','12px','13px','15px']} textAlign='center' height='4rem' borderRadius='10%'> 
+        <Button  w={['100%',"25%","20%",'20%']}   fontSize={['15px','12px','13px','15px']} textAlign='center' height='4rem' borderRadius='10'> 
         <Image h={['50%','35%','50%','50%']} src='https://assets.pharmeasy.in/web-assets/dist/6b3d644c.svg'/>
         <Text>All Test</Text>
         </Button>
 
-        <Button  border='1px solid black' w={['100%',"25%","20%",'20%']} fontSize={['15px','12px','13px','15px']} textAlign='center' height='4rem' borderRadius='10%'> 
+        <Button   w={['100%',"25%","20%",'20%']} fontSize={['15px','12px','13px','15px']} textAlign='center' height='4rem' borderRadius='10'> 
         <Image  h={['50%','35%','50%','50%']} src='https://assets.pharmeasy.in/web-assets/dist/dea295a0.svg'/>
         <Grid>
         <Text>Health </Text>
@@ -27,7 +27,7 @@ const FourTest = () => {
         </Grid>
         </Button>
 
-        <Button  border='1px solid black' w={['100%',"25%","20%",'20%']} fontSize={['15px','12px','13px','15px']} textAlign='center' height='4rem' borderRadius='10%'> 
+        <Button   w={['100%',"25%","20%",'20%']} fontSize={['15px','12px','13px','15px']} textAlign='center' height='4rem' borderRadius='10'> 
         <Image h={['50%','35%','50%','50%']} src='https://assets.pharmeasy.in/web-assets/dist/d4d62fbf.svg'/>
         <Grid>
         <Text>Upload </Text>
@@ -35,7 +35,7 @@ const FourTest = () => {
         </Grid>
         </Button>
 
-        <Button  border='1px solid black' w={['100%',"25%","20%",'20%']} fontSize={['15px','12px','13px','15px']} textAlign='center' height='4rem' borderRadius='10%'> 
+        <Button   w={['100%',"25%","20%",'20%']} fontSize={['15px','12px','13px','15px']} textAlign='center' height='4rem' borderRadius='10'> 
         <Image h={['50%','35%','50%','50%']} src='https://assets.pharmeasy.in/web-assets/dist/4ed59722.svg'/>
 
         <Grid>

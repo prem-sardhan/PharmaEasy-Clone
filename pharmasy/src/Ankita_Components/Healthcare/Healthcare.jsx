@@ -13,7 +13,7 @@ import Footer from "../Footer/Footer";
 
 const categorydata=[{
     "id": 109,
-    "name": "Covid Essentials",
+    "name": "All Category",
     "imageUrl": "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/6d462f424a43372ea8b7b6f8ca13e052.png?f=png",
     "discountText": "Upto 77% off",
     "slug": "covid-essentials-109",
