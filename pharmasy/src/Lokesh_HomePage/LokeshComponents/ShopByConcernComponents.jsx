@@ -1,9 +1,9 @@
-import "./ShopByConcernComponents.css";
+import "./Home_Styles/ShopByConcernComponents.css";
 
 const ShopByConcernComponents = () => {
     return (
         <div className="ShopByConcern-Container">
-            <h2>Shop by Concern</h2>
+            <h1 className="h1-tag-size">Shop by Concern</h1>
             <p>Products are handpicked by experts</p>
             <div className="ShopByConcern-Box">
                 <div>

@@ -4,7 +4,7 @@ import CartPage from "../Pages/Cart/cartPage";
 
 import HealthCarePage from "../Pages/HealthCare/HealthCarePage";
 import LabTestPage from "../Pages/LabTest/LabTestPage";
-import {Home} from "../LokeshPages/Home"
+import {Home} from "../Lokesh_HomePage/LokeshPages/Home"
 import SingleProductPage from "../Pages/singleProductPage/SingleProductPage";
 import ProductsPage from "../Pages/productspage/productspage"
 // import OrderMedicines from "../Pages/OrderMedicines/OrderMedicines";

@@ -1,5 +1,4 @@
 
-/* ----------------------------------------Carousel_section_Start------------------------------------------ */
 .Lokesh-Home-Container{
     background-color: whitesmoke;
 }
@@ -26,15 +25,12 @@
     border-radius: 10px;
 }
 
-/* ----------------------------------------Carousel_section_end------------------------------------------ */
-
-
-/* ---------------------------------------Home_First_Section_Start-------------------------------------- */
+.Home_carousel_item img:hover{
+    cursor: pointer;
+}
 
 .lokesh_home_first_section{
     display: block;
-    width: 100%;
-    margin-top: 5%;
 }
 
 .lokesh_home_first_section > p{
@@ -44,6 +40,7 @@
     font-weight: 500;
     display: block;
     text-align: left;
+    margin-left: 2%;
 }
 
 .lokesh_home_first-section-grid{
@@ -95,10 +92,10 @@
 }
 
 .lokesh_home_first-section-grid > div:last-child > div:first-child{
-    display: block;
+    display: flex;
     width: 100%;
-    padding: 0;
-    text-align: center;
+    padding-top: 2%;
+    justify-content: center;
 }
 
 .lokesh_home_first-section-grid > div:last-child > div:last-child{
@@ -113,10 +110,6 @@
     cursor: pointer;
 }
 
-/* ---------------------------------------Home_First_Section_end-------------------------------------- */
-
-
-/* ---------------------------------------Home_Second_Section_Start-------------------------------------- */
 
 .lokesh_home_second_section > p{
     font-size: 190%;
@@ -132,9 +125,7 @@
     width: 100%;
     height: 200px;
 }
-/* ---------------------------------------Home_Second_Section_end-------------------------------------- */
 
-/* ---------------------------------------Home_third_Section_Start-------------------------------------- */
 
 .lokesh_home_third_section > p{
     font-size: 190%;
@@ -151,10 +142,7 @@
     width: 100%;
     height: 200px;
 }
-/* ---------------------------------------Home_third_Section_end-------------------------------------- */
 
-
-/* ---------------------------------------Home_fourth_Section_start-------------------------------------- */
 
 .lokesh_home_fourth-section-Box-1{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -251,50 +239,39 @@
     font-weight: bolder;
 }
 
-.home_unknown_section{
-    display: block;
+.lokesh_home_fourth_section{
+    margin-top: 5%;
     margin-bottom: 5%;
+    display: block;
+    border: 1px solid rgba(255, 0, 0, 0);
 }
 
-.home_unknown_section-container{
-    background-color: rgb(228, 251, 250);
-    background-image: url(https://assets.pharmeasy.in/apothecary/images/downloadBanner.webp?dim=1440x0&q=100);
-    background-repeat: no-repeat;
-    background-size: cover;
+.home_third_carousel_section{
     width: 100%;
-    /* height: 300px; */
+    margin-top: 5%;
 }
 
-.home_unknown_section-container > div{
-    border: 1px solid red;
-    width: 40%;
+.ShopByConcern{
     margin: auto;
-    padding-top: 3%;
-    padding-bottom: 3%;
 }
-/* ---------------------------------------Home_fourth_Section_end-------------------------------------- */
-
 
 @media all and (min-width: 851px) and (max-width: 1200px){
+        
+    .Home_Lab_Tests_padding{
+        display: none;
+    }
 
-/* ---------------------------------------Home_Second_Section_Start-------------------------------------- */
     .lokesh_home_second_section > p{
         font-size: 190%;
         margin-top: 5%;
     }
-/* ---------------------------------------Home_Second_Section_end-------------------------------------- */
 
-
-
-/* ---------------------------------------Home_third_Section_Start-------------------------------------- */
     .lokesh_home_third_section > p{
         font-size: 190%;
         margin-top: 5%;
     }
-/* ---------------------------------------Home_third_Section_end-------------------------------------- */
 
 
-/* ---------------------------------------Home_fourth_Section_start-------------------------------------- */
     .Home_part-1 > div:first-child{
         margin-top: 6%;
     }
@@ -339,14 +316,21 @@
         border-radius: 5px;
         padding: 0% 2.4%;
     }
-/* ---------------------------------------Home_fourth_Section_end-------------------------------------- */
 
 }
 
 @media all and (min-width: 551px) and (max-width: 850px){
-   
+       
+    .Home_Lab_Tests_padding{
+        display: none;
+    }
+    .lokesh_home_first_section{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
     .lokesh_home_first_section > p{
-        font-size: 150%;
+        font-size: 170%;
     }
 
     .lokesh_home_first-section-grid{
@@ -363,25 +347,19 @@
         font-size: 58%;
     }
         
-/* ---------------------------------------Home_Second_Section_Start-------------------------------------- */
 
     .lokesh_home_second_section > p{
         font-size: 140%;
         margin-top: 8%;
     }
-/* ---------------------------------------Home_Second_Section_end-------------------------------------- */
 
 
-/* ---------------------------------------Home_third_Section_Start-------------------------------------- */
     .lokesh_home_third_section > p{
         font-size: 140%;
         margin-top: 8%;
     }
-/* ---------------------------------------Home_third_Section_end-------------------------------------- */
 
 
-
-/* ---------------------------------------Home_fourth_Section_start-------------------------------------- */
     .lokesh_home_fourth-section-Box-1{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -443,18 +421,24 @@
     .Home_part-2 > div:last-child p span{
         padding: 0% 2%;
     }
-/* ---------------------------------------Home_fourth_Section_end-------------------------------------- */
 
 }
 
 @media all and (min-width: 280px) and (max-width: 550px){
-    .Lokesh-Home-Container{
-        margin-top: 30%;
-    }
-    .lokesh_home_first_section > p{
-        font-size: 130%;
+        
+    .Home_Lab_Tests_padding{
+        display: none;
     }
 
+    .lokesh_home_first_section{
+        margin-bottom: 17%;
+        margin-top: 13%;
+    }
+
+    .lokesh_home_first_section > p{
+        font-size: 180%;
+    }
+   
     .lokesh_home_first-section-grid{
         margin: 4% auto 4% 2%;
         grid-template-columns: repeat(1,1fr);
@@ -501,12 +485,6 @@
         border-radius: 8px;
     }
 
-    .lokesh_home_first-section-grid > div:last-child > div:first-child{
-        display: block;
-        width: 100%;
-        padding: 0;
-        text-align: center;
-    }
 
     .lokesh_home_first-section-grid > div:last-child > div:last-child{
         display: block;
@@ -520,23 +498,18 @@
         cursor: pointer;
     }
         
-/* ---------------------------------------Home_Second_Section_Start-------------------------------------- */
 
     .lokesh_home_second_section > p{
         font-size: 130%;
         margin-top: 10%;
     }
-/* ---------------------------------------Home_Second_Section_end-------------------------------------- */
 
-/* ---------------------------------------Home_third_Section_Start-------------------------------------- */
     .lokesh_home_third_section > p{
         font-size: 130%;
         margin-top: 10%;
     }
-/* ---------------------------------------Home_third_Section_end-------------------------------------- */
 
 
-/* ---------------------------------------Home_fourth_Section_start-------------------------------------- */
     .lokesh_home_fourth-section-Box-1{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -598,6 +571,8 @@
     .Home_part-2 > div:last-child p span{
         padding: 0% 2%;
     }
-/* ---------------------------------------Home_fourth_Section_end-------------------------------------- */
 
+    .ShopByConcern{
+        margin-top: 15%;
+    }
 }
