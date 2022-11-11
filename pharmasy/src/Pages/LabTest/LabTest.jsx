@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Ad from '../../Abhay_components/Ad'
 import Discription from '../../Abhay_components/Discription'
 import FourTest from '../../Abhay_components/FourTest'
@@ -10,19 +10,26 @@ import Footer from '../../Ankita_Components/Footer/Footer'
 
 
 
+
+
+
+
+
 const LabTest = () => {
   return (
-    <div>
-      
+    <>
+      <div>LabTest</div>
       <ImgSlider/>
       <FourTest/>
       <Ad/>
-      <Privious/>
+       <Privious/>
       <Discription/>
-      <HideAndShowText/>
-      <Footer/>
-
-    </div>
+       <HideAndShowText/>
+       {/* <Footer/> */}
+      
+    
+    </>
+  
   )
 }
 

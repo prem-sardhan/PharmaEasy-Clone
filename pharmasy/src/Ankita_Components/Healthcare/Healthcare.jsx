@@ -10,7 +10,7 @@ import { DownLoadApp } from "./DownLoadApp";
 import HealthcareCarousel from "./HealthcareCarousel";
 import Footer from "../Footer/Footer";
 
-export const Healthcare=()=>{
+ const Healthcare=()=>{
     const [data,setData]=useState("")
     const getData=()=>{
         axios.get(`http://localhost:8080/healthCarePage`)
@@ -146,3 +146,5 @@ export const Healthcare=()=>{
         </>  
     )
 }
+
+export default Healthcare

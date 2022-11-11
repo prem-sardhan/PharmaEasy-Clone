@@ -5,9 +5,11 @@ import { ShopByConcernComponents } from "../LokeshComponents/ShopByConcernCompon
 import "./Home.css";
 import "../LokeshComponents/HomePage_Navbar.css";
 import { HomePage_Navbar } from "../LokeshComponents/HomePage_Navbar";
+import Footer from "../Ankita_Components/Footer/Footer";
 
 const Home = () => {
     return (
+        <>
         <div className="Lokesh-Home-Container">
             <HomePage_Navbar />
             {/* -----------------------------------------Top_Section_start------------------------------------------ */}
@@ -161,6 +163,10 @@ const Home = () => {
                 </div>
             </section>
         </div>
+       {/* <Footer/> */}
+        
+        
+        </>
 
     );
 }

@@ -11,6 +11,19 @@
     top: 0;
     z-index: 100;
   }
+  @media all and (min-width: 551px) and (max-width: 950px)
+  {
+    .container{
+      width: 100%;
+      gap: 2%;
+      height: 80px;
+    }
+
+    .tabContainer{
+      width: 30%;
+    }
+  }
+ 
   
   .container > div:nth-child(1) {
     flex: 1;

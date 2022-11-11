@@ -1,5 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+
+import { Home } from "../LokeshPages/Home";
 import Cart from "../Pages/Cart/Cart";
 import HealthCare from "../Pages/HealthCare/HealthCare";
 import LabTest from "../Pages/LabTest/LabTest";
@@ -23,7 +25,7 @@ const Mainroutes = () => {
     <div>
       <Navbar />
       <Routes>
-        {/* <Route path="/" element={<Main />} /> */}
+        <Route path="/" element={<Home />} />
     
         <Route path="/orderMed" element={<OrderMedicines />} />
         <Route path="/HealthCare" element={<HealthCare />} />
