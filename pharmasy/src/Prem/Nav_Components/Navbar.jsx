@@ -1,8 +1,3 @@
-
-
-
-
-
 import styles from "./navbar.module.css";
 import {
   Box,
@@ -237,7 +232,6 @@ const Navbar = () => {
             </div>
           </div>
 
-        
             <Flex>
               <TbDiscount2
                 style={{ marginTop: "0.2rem", marginRight: "-9.9rem" }}
@@ -246,11 +240,7 @@ const Navbar = () => {
               <p style={{ color: "white",marginLeft:"9rem" }}>Offers</p>
             </Flex>
 
-            
                <DrawerLogin />
-         
-          
-          
 
             <Flex>
               <HiShoppingCart

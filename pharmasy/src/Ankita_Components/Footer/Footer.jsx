@@ -8,7 +8,7 @@ const Footer = () => {
    
   return (
     //  addfooter logic
-    <div className={styles.container}>
+    <div  className={styles.container}>
         <MediaQuery minWidth={880} maxWidth={2000}>
         <SimpleGrid columns={4} spacing={100}>
             <Box gap="10px">

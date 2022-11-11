@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Box, Image } from '@chakra-ui/react'
 const ImgSlider = () => {
     return (
-        <Box width='80%' margin='auto'>
+        <Box  width='80%' margin='auto'>
         <Carousel>
             <Box  >
                 <Image src="https://cms-contents.pharmeasy.in/banner/69dc6d9168b-1_Thyroid-Profile_HP_634x274_v1.jpg" />

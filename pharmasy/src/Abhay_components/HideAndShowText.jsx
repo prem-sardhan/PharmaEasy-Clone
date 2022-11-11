@@ -10,7 +10,7 @@ import {
 
 const HideAndShowText = () => {
   return (
-    <Box width='80%' margin='auto'>
+    <Box width='80%' margin='auto' >
        <Accordion defaultIndex={[0]} allowMultiple>
             <AccordionItem  fontSize='12px' boxShadow=' rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px' mb='15px'>
                 <h2>

@@ -26,6 +26,7 @@
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "react-select": "^5.6.0",
+    "react-slick": "^0.29.0",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"
@@ -54,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.4.0"
   }
 }
