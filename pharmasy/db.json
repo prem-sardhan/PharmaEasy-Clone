@@ -3350,6 +3350,21 @@
         "instock":true
     }
         ]
+        
 
-    }
+    },
+    "products":[
+      {
+        "id": 1090,
+        "name": "Covid Essentials",
+        "price":520,
+        "img":"https://cms-contents.pharmeasy.in/carousel_item/d87a2026235-App_Toothsi.jpg?dim=1440x0"
+        },
+      {
+        "id": 1091,
+        "name": "pamper",
+        "price":1520,
+        "img":"https://cms-contents.pharmeasy.in/carousel_item/2f3e832e341-Everherb-min.png?dim=1440x0"
+      }
+    ]
   }
