@@ -1,4 +1,5 @@
 import { CarouselBox } from "../LokeshComponents/CarouselBox";
+import Footer from "../Ankita_Components/Footer/Footer";
 // import { Home_First_Section } from "../LokeshComponents/Home_First_Section";
 import { FaLock } from "react-icons/fa";
 import { ShopByConcernComponents } from "../LokeshComponents/ShopByConcernComponents";
@@ -159,6 +160,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };

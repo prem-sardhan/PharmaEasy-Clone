@@ -4,6 +4,7 @@ import { useState ,useEffect} from "react";
 import { compose } from "redux";
 
 
+
 const SingleProduct = ({cartvalue,setcartvalue}) => {
 const toast=useToast()
 const [product,setproductdata]=useState({})

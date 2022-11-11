@@ -10,7 +10,7 @@ import Footer from '../../Ankita_Components/Footer/Footer'
 
 
 
-const LabTest = () => {
+const LabTestPage = () => {
   return (
     <div>
       
@@ -26,4 +26,4 @@ const LabTest = () => {
   )
 }
 
-export default LabTest
+export default LabTestPage
