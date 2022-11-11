@@ -1,6 +1,8 @@
 import React from "react";
 import { Image, Stack, Text ,SimpleGrid,Box,UnorderedList,ListItem} from '@chakra-ui/react'
 export const AboutHealthcare=()=>{
+    // AboutHealthcare
+
     return(
         <>
          <Stack  textAlign="left" color="#4f585e"  marginLeft="8em" marginRight="8em"
