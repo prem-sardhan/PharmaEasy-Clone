@@ -1,25 +1,45 @@
+import { background, border ,Flex,Box } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import { json } from "react-router-dom";
 import "./card.css";
 
 const Card = ({ ele,displayProp="grid" }) => {
-    console.log(displayProp)
-    
+  const navigate=useNavigate()
+    const {img1,title,mrp,strike,discount}=ele
+const StoreAtLocalStorage=()=>{
+  localStorage.setItem("singleProductdata",JSON.stringify(ele)
+)
+navigate("/singleproduct")
+
+}
+
+
   return (
-    <div style={{  marginTop: "20px" ,display:`${displayProp} `}}>
+    <Box
+    h="300px"
+    w="231px"
+    padding="20px 10px"
+    transition="all 0.8s ease"
+    border="1.5px solid #e2e6e8"
+    borderRadius="lg"
+    cursor="pointer"
+    _hover={{
+      border: "1.5px solid #0b8e87",
+      transition: "all 0.5s ease",
+      transform: "translateY(-3px)",
+      boxShadow: " rgba(17, 17, 26, 0.2) 0px 10px 16px",}} onClick={StoreAtLocalStorage}>
       <div
       id="card-img-div"
         style={{
-          boxShadow:
-            "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
-
           height: "170px",
-          width: "150px",
+         
           borderRadius: "5px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
         }}
       >
-        <img style={{maxHeight:"70%",maxWidth:"80%"}} src={ele.damImages[0].url} alt="" />
+        <img style={{maxHeight:"70%",maxWidth:"80%"}} src={img1} alt="" />
       </div>
 
       <div
@@ -27,7 +47,6 @@ const Card = ({ ele,displayProp="grid" }) => {
           textAlign: "start",
           paddingLeft: "10px",
           fontSize: "0.9em",
-          width: "150px",
           fontSize:"16px"
         }}
       >
@@ -41,17 +60,32 @@ const Card = ({ ele,displayProp="grid" }) => {
             WebkitBoxOrient: "vertical",
           }}
         >
-          {ele.name}
+          {title}
         </p>
         <p style={{ color: "grey" }}>
-          MRP <s>{`₹${ele.mrpDecimal}`}</s>
+          MRP <s>{`₹${strike}`}</s>
         </p>
-        <p style={{ fontWeight: "bold" }}>
-          ₹{ele.salePriceDecimal} &nbsp;{" "}
-          <span style={{ color: "red" }}>{`${ele.discountPercent}% OFF`}</span>
-        </p>
+       <div style={{display:"flex",alignItems:"center"}}>
+       <p style={{ fontWeight: "bold" }}>
+          ₹{mrp} &nbsp;{" "}
+          </p>
+          <Flex
+                  align="center"
+                  justify="start"
+                  px="6px"
+                  color="white"
+                  fontSize="10px"
+                  fontWeight="600"
+                  height="100%"
+                  w="35%"
+                  bgImage='url("https://assets.pharmeasy.in/web-assets/dist/1602b4ce.svg")'
+                >
+                  {discount}% OFF
+                </Flex>
+       
+       </div>
       </div>
-    </div>
+    </Box>
   );
 };
 
