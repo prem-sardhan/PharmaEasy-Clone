@@ -1,12 +1,12 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import CartPage from "../pages/Cart/cartPage";
 
-import HealthCarePage from "../pages/HealthCare/HealthCarePage";
-import LabTestPage from "../pages/LabTest/LabTestPage";
+import { Routes, Route } from "react-router-dom";
+import CartPage from "../Pages/Cart/cartPage";
+
+import HealthCarePage from "../Pages/HealthCare/HealthCarePage";
+import LabTestPage from "../Pages/LabTest/LabTestPage";
 import {Home} from "../LokeshPages/Home"
-import SingleProductPage from "../pages/singleProductPage/SingleProductPage";
-import ProductsPage from "../pages/productspage/productspage"
+import SingleProductPage from "../Pages/singleProductPage/SingleProductPage";
+import ProductsPage from "../Pages/productspage/productspage"
 // import OrderMedicines from "../Pages/OrderMedicines/OrderMedicines";
 
 // import RtpcrTest from "../Pages/RtpcrTest/RtpcrTest";
