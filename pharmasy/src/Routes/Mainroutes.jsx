@@ -1,20 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Cart from "../Pages/Cart/Cart";
-import HealthCare from "../Pages/HealthCare/HealthCare";
-import LabTest from "../Pages/LabTest/LabTest";
+import CartPage from "../pages/Cart/cartPage";
 
+import HealthCarePage from "../pages/HealthCare/HealthCarePage";
+import LabTestPage from "../pages/LabTest/LabTestPage";
+import {Home} from "../LokeshPages/Home"
+import SingleProductPage from "../pages/singleProductPage/SingleProductPage";
+import ProductsPage from "../pages/productspage/productspage"
+// import OrderMedicines from "../Pages/OrderMedicines/OrderMedicines";
 
-import OrderMedicines from "../Pages/OrderMedicines/OrderMedicines";
-import RtpcrTest from "../Pages/RtpcrTest/RtpcrTest";
+// import RtpcrTest from "../Pages/RtpcrTest/RtpcrTest";
 import { Navbar } from "../Prem/Nav_Components/Navbar";
-
-
-
-
-
-
-
 
 
 
@@ -23,19 +19,24 @@ const Mainroutes = () => {
     <div>
       <Navbar />
       <Routes>
-        {/* <Route path="/" element={<Main />} /> */}
+        <Route path="/" element={<Home />} />
     
-        <Route path="/orderMed" element={<OrderMedicines />} />
-        <Route path="/HealthCare" element={<HealthCare />} />
-        <Route path="/cart" element={<Cart />} />
+        {/* <Route path="/orderMed" element={<OrderMedicines />} /> */}
+        <Route path="/HealthCare" element={<HealthCarePage />} />
+        <Route path="/cart" element={<CartPage />} />
        
-        <Route path="/labtest" element={<LabTest />} />
-        <Route path="/rtpcr" element={<RtpcrTest />} />
+        <Route path="/labtest" element={<LabTestPage />} />
+
+        <Route path="/product" element={<ProductsPage />} />
+        <Route path="/singleproduct" element={<SingleProductPage />} />
+        
+        {/* <Route path="/rtpcr" element={<RtpcrTest />} /> */}
       
        
         
       
       </Routes>
+      
      
     </div>
   );

@@ -3,6 +3,7 @@ import SingleProduct from "../../Rohit_components/Singleproduct"
 import { Container,Box, Flex, Text, Button, Image } from "@chakra-ui/react"
 import { useEffect,useState } from "react"
 import { useNavigate } from "react-router-dom"
+import Footer from "../../Ankita_Components/Footer/Footer"
 
 
 const SingleProductPage=()=>{
@@ -42,7 +43,7 @@ useEffect(()=>{
    
 
 
-
+<Footer/>
     </div>
    )
 }
