@@ -96,8 +96,8 @@ Price high to low
           </div></div>
 <div >
     <Text fontSize="xl"
-    mt="20%" >Filter product by price</Text>
-    <Button mt="2" value="clear" onClick={FilterData}>Clear filter</Button>
+    ml="15%" mt="20%" >Filter product by price</Text>
+    <Button ml="30%" mt="6" value="clear" onClick={FilterData}>Clear filter</Button>
 </div>
 
 
