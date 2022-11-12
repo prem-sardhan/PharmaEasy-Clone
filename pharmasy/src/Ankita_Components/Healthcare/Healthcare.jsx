@@ -146,7 +146,7 @@ const Healthcare=()=>{
     return(
         <>
             <section className="ankita">
-            <HealthcareCarousel/>
+            <HealthcareCarousel  />
             </section>
             
             <div>

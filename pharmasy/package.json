@@ -18,6 +18,8 @@
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
+    "react-multi-carousel": "^2.8.2",
+    "react-pay-icons": "^3.0.0",
     "react-redux": "^8.0.5",
     "react-responsive": "^9.0.0",
     "react-responsive-carousel": "^3.2.23",
