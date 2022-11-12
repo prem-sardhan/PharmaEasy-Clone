@@ -64,6 +64,7 @@
         grid-template-columns: repeat(4,1fr);
         gap: 3%;
         margin-bottom: 10%;
+        margin-top: 15%;
     }
 
     .Home_first_top_section  div img{
@@ -83,6 +84,7 @@
         grid-template-columns: repeat(3,1fr);
         gap: 3%;
         margin-bottom: 20%;
+        margin-top: 20%;
     }
 
     .Home_first_top_section  div img{

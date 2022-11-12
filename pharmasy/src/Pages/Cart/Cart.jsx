@@ -6,17 +6,26 @@ import { Box, Button, Image, position, Select, Stack, Text, Drawer,
   DrawerContent,
   DrawerCloseButton,useDisclosure, Input,useToast } from "@chakra-ui/react"
 
-import React,{ useEffect,useState} from "react"
-import { Link } from "react-router-dom"
+import React,{ useEffect,useState,useContext} from "react"
+import { Link, useNavigate } from "react-router-dom"
+
+import { AuthContext } from "../../Context/AuthContext"
+
+
 
 
 
 const Cart=()=>{
+  const navigate=useNavigate()
+
+const {authState,setAuthState}=useContext(AuthContext)
+console.log("authcontext",authState)
 const toast=useToast()
 const [cartdata,setcartData]=useState([])
 const [totalAmount,setTotalAmount]=useState(0)
 const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
+ 
 const getCartData=()=>{
   let data=JSON.parse(localStorage.getItem("cartData"))||[]
   setcartData(data)
@@ -42,12 +51,26 @@ const GetTotalvalue=()=>{
   setTotalAmount(Math.floor(sum))
     }
 
+const Gotopayment=()=>{
+  console.log("invoked")
+  if(authState){
+    navigate("/payment")
+  }else{
+    toast({
+      title: "Please Login First",
+      position: "top",
+      isClosable: true,
+      status:"warning"
+    })
+  }
+}
+
 useEffect(()=>{
 getCartData()
 GetTotalvalue()
 
 
-},[cartdata])
+},[])
 
 const SaveAdreess=()=>{
   
@@ -157,9 +180,9 @@ return(
 
 <Box mt="20px">
 
-<Link to="/checkout">
-  <Button size="lg" width="65%" fontWeight="bold"  colorScheme="teal" >Checkout</Button>
-</Link>
+
+  <Button onClick={Gotopayment} size="lg" width="65%" fontWeight="bold"  colorScheme="teal" >Checkout</Button>
+
 </Box>
 
 </Box>

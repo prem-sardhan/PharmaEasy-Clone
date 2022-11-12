@@ -7,12 +7,19 @@ const AuthProvider = ({ children }) => {
   const [formData, setFormData] = useState({});
   const [total, setTotal] = useState(0);
 
+  const [isAuth, setIsAuth] = useState(false);
+
+  const toggleAuth = () => {
+    setIsAuth(!isAuth);
+  };
+
   useEffect(() => {
     const logIn = localStorage.getItem("logIn");
     if (logIn) {
       setAuthState(true);
     }
   }, []);
+  console.log(children)
 
   return (
     <AuthContext.Provider
@@ -23,6 +30,8 @@ const AuthProvider = ({ children }) => {
         setFormData,
         total,
         setTotal,
+        toggleAuth,
+        isAuth
       }}
     >
       {children}

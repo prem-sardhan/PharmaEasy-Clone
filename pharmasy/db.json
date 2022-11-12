@@ -1,4 +1,14 @@
 {
+  "posts": [
+    {
+      "name": "sbjssl",
+      "image": "wjow",
+      "price": "7291",
+      "discount": "728",
+      "category": "Healthcare",
+      "id": 1
+    }
+  ],
   "homePage": {
     "homePageData": {
       "logo": "https://cdn.pharmeasy.in/cms/lp_logo.png",
@@ -942,7 +952,6 @@
       }
     ]
   },
-
   "LiveEasySearch": [
     {
       "entityType": 2,
@@ -3265,7 +3274,6 @@
         "instock": true
       }
     ],
-
     "Home Care": [
       {
         "title": "Dettol Antiseptic Liquid Bottle Of 550 Ml",
@@ -3275,7 +3283,10 @@
         "mrp": 180.98,
         "strike": 194.6,
         "discount": 13.62,
-        "ancestor": ["All Categories", "Home Care"],
+        "ancestor": [
+          "All Categories",
+          "Home Care"
+        ],
         "brand": "N/A",
         "instock": true
       },
@@ -3287,7 +3298,10 @@
         "mrp": 160,
         "strike": 200,
         "discount": 40,
-        "ancestor": ["All Categories", "Home Care"],
+        "ancestor": [
+          "All Categories",
+          "Home Care"
+        ],
         "brand": "N/A",
         "instock": true
       },
@@ -3299,7 +3313,10 @@
         "mrp": 400,
         "strike": 500,
         "discount": 100,
-        "ancestor": ["All Categories", "Home Care"],
+        "ancestor": [
+          "All Categories",
+          "Home Care"
+        ],
         "brand": "N/A",
         "instock": true
       },
@@ -3311,7 +3328,11 @@
         "mrp": 96.03,
         "strike": 99,
         "discount": 2.97,
-        "ancestor": ["All Categories", "Home Care", "Disinfectants"],
+        "ancestor": [
+          "All Categories",
+          "Home Care",
+          "Disinfectants"
+        ],
         "brand": "N/A",
         "instock": true
       },
@@ -3323,7 +3344,11 @@
         "mrp": 97.02,
         "strike": 98,
         "discount": 1.8,
-        "ancestor": ["All Categories", "Home Care", "Disinfectants"],
+        "ancestor": [
+          "All Categories",
+          "Home Care",
+          "Disinfectants"
+        ],
         "brand": "N/A",
         "instock": true
       },
@@ -3335,7 +3360,11 @@
         "mrp": 70,
         "strike": 100,
         "discount": 30,
-        "ancestor": ["All Categories", "Home Care", "Disinfectants"],
+        "ancestor": [
+          "All Categories",
+          "Home Care",
+          "Disinfectants"
+        ],
         "brand": "N/A",
         "instock": true
       },
@@ -3364,7 +3393,10 @@
         "mrp": 135.15,
         "strike": 159,
         "discount": 23.85,
-        "ancestor": ["All Categories", "Home Care"],
+        "ancestor": [
+          "All Categories",
+          "Home Care"
+        ],
         "brand": "N/A",
         "instock": true
       },
@@ -3376,7 +3408,10 @@
         "mrp": 63.36,
         "strike": 99,
         "discount": 35.64,
-        "ancestor": ["All Categories", "Home Care"],
+        "ancestor": [
+          "All Categories",
+          "Home Care"
+        ],
         "brand": "N/A",
         "instock": true
       },
@@ -3388,7 +3423,10 @@
         "mrp": 77.22,
         "strike": 99,
         "discount": 21.78,
-        "ancestor": ["All Categories", "Home Care"],
+        "ancestor": [
+          "All Categories",
+          "Home Care"
+        ],
         "brand": "N/A",
         "instock": true
       }
