@@ -15,7 +15,7 @@ const StoreAtLocalStorage=()=>{
 
 
   return (
-    <Link  _hover={{}} to="/singleproduct"><Box
+    <Link  to="/singleproduct"><Box
     h="300px"
     w="231px"
     padding="20px 10px"
