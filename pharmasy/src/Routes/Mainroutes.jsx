@@ -1,12 +1,13 @@
 
 import { Routes, Route } from "react-router-dom";
-import CartPage from "../Pages/Cart/cartPage";
+
 
 import HealthCarePage from "../Pages/HealthCare/HealthCarePage";
 import LabTestPage from "../Pages/LabTest/LabTestPage";
 import {Home} from "../Lokesh_HomePage/LokeshPages/Home"
 import SingleProductPage from "../Pages/singleProductPage/SingleProductPage";
 import ProductsPage from "../Pages/productspage/productspage"
+import Cart from "../Pages/Cart/Cart";
 // import OrderMedicines from "../Pages/OrderMedicines/OrderMedicines";
 
 // import RtpcrTest from "../Pages/RtpcrTest/RtpcrTest";
@@ -23,7 +24,7 @@ const Mainroutes = () => {
     
         {/* <Route path="/orderMed" element={<OrderMedicines />} /> */}
         <Route path="/HealthCare" element={<HealthCarePage />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route path="/cart" element={<Cart/>} />
        
         <Route path="/labtest" element={<LabTestPage />} />
 
