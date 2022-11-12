@@ -83,8 +83,7 @@ return
       <section style={{width:"100%"}}>
 {/* 
       title and ratings div */}
-<div id="single-product-heading">
-  <Text fontSize={{sm:"x-small" ,md:"large",md:"2xl"}} fontWeight="bold" color="gray.600" >{title}</Text>
+<div id="single-product-heading"><Text fontSize={{sm:"x-small" ,md:"large",md:"2xl"}} fontWeight="bold" color="gray.600" >{title}</Text>
 
 <Text color="teal.600" mt="4" fontSize="xl">
   Visit {brand[0]} store
