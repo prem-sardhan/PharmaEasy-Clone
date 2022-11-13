@@ -1,4 +1,4 @@
-import { Alert, Box, Button, Input } from "@chakra-ui/react";
+import { Alert, Box, Button, Input, useToast } from "@chakra-ui/react";
 import React, { useContext } from "react";
 
 import { Navigate } from "react-router-dom";
@@ -6,9 +6,17 @@ import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
   const { isAuth, toggleAuth } = useContext(AuthContext);
+  const toast=useToast()
 
   if (isAuth) {
-    alert('Admin_login Successfully')
+    
+    toast({
+      title: "Hello Admin!",
+      position: "top",
+      isClosable: true,
+      status:"success"
+    })
+
     return <Navigate to="/testadmin" />;
   }
   

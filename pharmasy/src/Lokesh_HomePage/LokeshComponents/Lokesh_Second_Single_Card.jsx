@@ -1,13 +1,17 @@
 import "./Home_Styles/Lokesh_Second_Single_Card.css";
+import { useNavigate,Link } from "react-router-dom";
 
-const Lokesh_Second_Single_Card = ({id,img1,title,mrp,strike,discount}) => {
 
-    const StoreAtLocalStorage=(ele)=>{
-        localStorage.setItem("singleProductdata",JSON.stringify(ele));
+const Lokesh_Second_Single_Card = ({...elem}) => {
+    const navigate=useNavigate()
+    const {id,img1,title,mrp,strike,discount} = elem;
+    const StoreAtLocalStorage=()=>{
+        localStorage.setItem("singleProductdata",JSON.stringify(elem));
+        // console.log(elem);
     }
 
     return (
-        <div onClick={()=> StoreAtLocalStorage(id)} key={id} className="Lokesh_Second_Single_Car_Item">
+        <Link to="/singleproduct"><div onClick={StoreAtLocalStorage} key={id} className="Lokesh_Second_Single_Car_Item">
             <div>
                 <img src={img1} alt={title} />
             </div>
@@ -16,7 +20,7 @@ const Lokesh_Second_Single_Card = ({id,img1,title,mrp,strike,discount}) => {
                 <p>MRP <span>₹{strike}</span></p>
                 <p>₹{mrp} <span>{discount}% OFF</span></p>
             </div>
-        </div>
+        </div></Link>
     );
 }
 
