@@ -19,7 +19,7 @@ const Cart=()=>{
   const navigate=useNavigate()
 
 const {authState,setAuthState}=useContext(AuthContext)
-console.log("authcontext",authState)
+
 const toast=useToast()
 const [cartdata,setcartData]=useState([])
 const [totalAmount,setTotalAmount]=useState(0)
@@ -29,6 +29,8 @@ const { isOpen, onOpen, onClose } = useDisclosure()
 const getCartData=()=>{
   let data=JSON.parse(localStorage.getItem("cartData"))||[]
   setcartData(data)
+  GetTotalvalue()
+
 }
 
 const deleteItem=(index)=>{
@@ -38,21 +40,26 @@ const deleteItem=(index)=>{
 
   setcartData(latestdata)
 
+
  
 
   localStorage.setItem("cartData",JSON.stringify(latestdata))
+  GetTotalvalue()
 }
 
 const GetTotalvalue=()=>{
+  let data=JSON.parse(localStorage.getItem("cartData"))||[]
   let sum=0
-  for(let x=0;x<cartdata.length;x++){
-    sum+=Number(cartdata[x].mrp)
-  }
-  setTotalAmount(Math.floor(sum))
+  if(data!=[]){
+    for(let x=0;x<data.length;x++){
+      sum+=Number(data[x].mrp)
     }
+    setTotalAmount(Math.floor(sum))
+      }
+  }
 
 const Gotopayment=()=>{
-  console.log("invoked")
+ 
   if(authState){
     navigate("/payment")
   }else{
@@ -65,9 +72,23 @@ const Gotopayment=()=>{
   }
 }
 
+const addAdress=()=>{
+  if(authState){
+   onOpen()
+  }else{
+    toast({
+      title: "Please Login First",
+      position: "top",
+      isClosable: true,
+      status:"warning"
+    })
+  }
+}
+
 useEffect(()=>{
+ 
 getCartData()
-GetTotalvalue()
+
 
 
 },[])
@@ -157,7 +178,7 @@ return(
 <section style={{textAlign:"center",width:"35%", paddingTop:"5%"}}>
 <Box  >
   <Button size="lg" width="65%" fontWeight="bold" variant="outline" colorScheme="teal" >{`Apply Coupons/ Offers   >`}</Button>
-<Button ref={btnRef} onClick={onOpen} mt="30px" size="lg" width="65%" fontWeight="bold"  colorScheme="teal" >Add Delivery Address</Button>
+<Button ref={btnRef} onClick={addAdress} mt="30px" size="lg" width="65%" fontWeight="bold"  colorScheme="teal" >Add Delivery Address</Button>
 
 </Box>
 

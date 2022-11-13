@@ -1,14 +1,5 @@
 {
-  "posts": [
-    {
-      "name": "sbjssl",
-      "image": "wjow",
-      "price": "7291",
-      "discount": "728",
-      "category": "Healthcare",
-      "id": 1
-    }
-  ],
+  "posts": [],
   "homePage": {
     "homePageData": {
       "logo": "https://cdn.pharmeasy.in/cms/lp_logo.png",
