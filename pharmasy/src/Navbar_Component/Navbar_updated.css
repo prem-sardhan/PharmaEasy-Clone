@@ -15,6 +15,7 @@
         width: 100%;
         border: 1px solid black;
         background-color: teal;
+        z-index: 100;
     }
     .PharmEasy_Navbar_Top-section{
         display: flex;
@@ -92,6 +93,7 @@
 
 @media all and (min-width: 651px) and (max-width: 800px){
     .PharmEasy_Navbar_container{
+        z-index: 100;
         display: block;
         position: fixed;
         background-color: teal;
