@@ -174,3 +174,27 @@ margin-top: 8rem;
   width: 66rem;
   margin: auto;
 }
+.bottom_2{
+  display: flex;
+  margin-top: 5rem;
+  gap:70px;
+  margin-left: 10rem;
+
+}
+.bottom_21>img{
+  width: 35vh;
+
+}
+.bottom_22>div{
+  display: flex;
+  gap:20px
+}
+.bottom_22>p{
+  font-size: 25px;
+  margin-bottom: 2rem;
+  margin-left: 0.5rem;
+}
+.bottom_22>div>div>a>img{
+ width: 25vh;
+
+}

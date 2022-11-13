@@ -22,6 +22,8 @@ import {Users} from "../Ankita_Components/FinalAdmin/users"
 import Myprofile from "../Prem/Myprofile/Myprofile"
 import Medicalrecord  from "../Prem/Myprofile/Medicalrecord"
 import Wallet from "../Prem/Myprofile/Wallet"
+import OrderMedicines from "../Pages/OrderMedicines/OrderMedicines"
+import RtpcrTest from "../Pages/RtpcrTest/RtpcrTest"
 
 
 const Mainroutes = () => {
@@ -31,13 +33,10 @@ const Mainroutes = () => {
       <Navbar_Update/>
       <Routes>
         <Route path="/" element={<Home />} />
-    
-        {/* <Route path="/orderMed" element={<OrderMedicines />} /> */}
+        <Route path="/orderMed" element={<OrderMedicines />} />
         <Route path="/HealthCare" element={<HealthCarePage />} />
         <Route path="/cart" element={<Cart/>} />
-       
         <Route path="/labtest" element={<LabTestPage />} />
-
         <Route path="/product" element={<ProductsPage />} />
         <Route path="/singleproduct" element={<SingleProductPage />} />
         <Route path="/payment" element={<PaymentPage/>}/>
@@ -45,17 +44,10 @@ const Mainroutes = () => {
         <Route path="/testadmin" element={<PrivateRoute><Dashboard/></PrivateRoute>}/>
         <Route path="/users" element={<PrivateRoute><Users/></PrivateRoute>}/>
         <Route path="/adminpage" element={<AdminSide/>}/>
-
         <Route path="/wallet" element={<Wallet/>}/>
         <Route path="/myprofile" element={<Myprofile/>}/>
         <Route path="/medicalrecord" element={<Medicalrecord/>}/>
-
-        
-        {/* <Route path="/rtpcr" element={<RtpcrTest />} /> */}
-      
-       
-        
-      
+        <Route path="/rtpcr" element={<RtpcrTest />} />
       </Routes>
       
      
