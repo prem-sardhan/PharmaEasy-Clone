@@ -16,9 +16,15 @@ import {
     DrawerFooter,
     PinInputField,
     useToast,
+    MenuList,
+    MenuItem,
   } from "@chakra-ui/react";
   import React, { useState } from "react";
+import { useEffect } from "react";
   import { RiUser5Fill } from "react-icons/ri";
+import { Link, Navigate ,useNavigate } from "react-router-dom";
+
+
   
   export default function DrawerLogin() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -26,6 +32,12 @@ import {
     const [otp, setOtp] = useState("");
     const [isLogin, setLogin] = useState(false);
     const toast=useToast()
+
+    useEffect(() => {
+      localStorage.setItem('logIn', JSON.stringify(isLogin));
+    }, [isLogin]);
+
+
     const random = Math.floor(1000 + Math.random() * 9000);
     const handleSend = () => {
       console.log(random);
@@ -55,9 +67,14 @@ import {
     };
     return (
       <>
-        <Box _hover={{}} ref={btnRef} colorScheme="teal" onClick={onOpen}>
-          <RiUser5Fill style={{height:"28px",width:"25px"}}/>  {isLogin?"User":"Login/signup"}
+        <Box _hover={{}} ref={btnRef} colorScheme="teal" onClick={onOpen} style={{marginLeft:"40px"}}>
+         
+   
+          {isLogin?"User":"Login/signup"}
+
+          
         </Box>
+        <Box> <RiUser5Fill style={{height:"25px",width:"85px",marginLeft:"-30px"}}/>  </Box>
         <Drawer
           size={"sm"}
           isOpen={isOpen}
@@ -131,7 +148,10 @@ import {
               <Text mt={5} fontSize={12}>
                 By clicking on continue you agree with our Privacy Policy
               </Text>
+              <Link  to="/adminlogin">Login as Admin</Link>
             </DrawerBody>
+
+           
   
             <DrawerFooter>
               <Button variant="outline" mr={3} onClick={onClose}>
@@ -140,8 +160,24 @@ import {
               <Button colorScheme="blue">Save</Button>
             </DrawerFooter>
           </DrawerContent>
+
+
+
+          
         </Drawer>
       </>
     );
   }
+  
+
+
+
+
+
+
+
+
+
+
+
   

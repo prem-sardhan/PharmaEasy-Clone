@@ -39,10 +39,12 @@ import { RiUser5Fill } from "react-icons/ri";
 import { HiShoppingCart } from "react-icons/hi";
 import { FiMail } from "react-icons/fi";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { json, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import { useEffect } from "react";
 import { useMediaQuery } from '@chakra-ui/react'
+import DrawerLogin from "./DrawerLogin"
+
 
 
 const options = [
@@ -179,6 +181,8 @@ const Navbar = () => {
   const [otp2, setOtp2] = useState(0);
   const [otp3, setOtp3] = useState(0);
   const [otp4, setOtp4] = useState(0);
+  const[cartno, SetCartNo]=useState(0)
+ 
   const [emptyError, setEmptyError] = useState(false);
   const toast = useToast();
   const value = useContext(AuthContext);
@@ -191,9 +195,24 @@ const Navbar = () => {
   var details = val.value;
 
   useEffect(() => {
+  
+
+
+    const CartData = JSON.parse(localStorage.getItem("cartData"))||[]
+    SetCartNo(CartData.length)
+ 
+   
+           
+            
+          
+        
+ 
+    
     if (details) {
       navigate(`/productdetails/${details}`);
+
     }
+    
   }, [details]);
 
   const sendMail = async (mail) => {
@@ -311,12 +330,82 @@ const Navbar = () => {
               />
               <p style={{ color: "white" }}>Offers</p>
             </Flex>
+            <Flex className="loginflex">
+             
+              <DrawerLogin/>
+            </Flex>
             <Flex className={styles.sidebar}>
-              <RiUser5Fill
+             
+            </Flex>
+
+            <Flex className={styles.sidebar}>
+              <HiShoppingCart
+                style={{ marginTop: "0.2rem", marginRight: "0.4rem", }}
+                size="23px"
+
+               
+              />
+             {cartno}
+             
+              <Link to="/cart">Cart</Link>
+            </Flex>
+          </Flex>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export { Navbar };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// profile section after login---------------------------
+
+
+ {/* <RiUser5Fill
                 style={{ marginTop: "0.2rem", marginRight: "0.4rem" }}
                 size="23px"
-              />
-              <Menu>
+              /> */}
+              {/* <Menu>
                 <MenuButton
                   style={{ cursor: "pointer", color: "white" }}
                   ref={btnRef}
@@ -503,21 +592,4 @@ const Navbar = () => {
                     </DrawerContent>
                   </Drawer>
                 )}
-              </Menu>
-            </Flex>
-
-            <Flex className={styles.sidebar}>
-              <HiShoppingCart
-                style={{ marginTop: "0.2rem", marginRight: "0.4rem", }}
-                size="23px"
-              />
-              <Link to="/cart">Cart</Link>
-            </Flex>
-          </Flex>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export { Navbar };
+              </Menu> */}
