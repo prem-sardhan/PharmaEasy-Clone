@@ -19,7 +19,7 @@ const AuthProvider = ({ children }) => {
       setAuthState(true);
     }
   }, []);
-  // console.log(children)
+  console.log(children)
 
   return (
     <AuthContext.Provider
