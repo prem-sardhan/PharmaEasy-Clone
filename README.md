@@ -84,7 +84,7 @@ Holistic Remedies is one of top leading and trusted company, which provides Heal
 ## Developers
 
 - **[Ankita Thakur](https://github.com/ankitatra)**
-- **[Rohit Kumar](https://github.com/xxRohitxx)**
+- **[Rohit Kumar](https://github.com/Rohit-world)**
 
 - **[Lokesh Patidar](https://github.com/lokesh-patidar)**
 - **[Abhay Kumar](https://github.com/abik00)**
