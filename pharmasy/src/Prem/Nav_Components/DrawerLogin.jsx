@@ -76,6 +76,8 @@ import { AuthContext } from "../../Context/AuthContext";
     return (
       <>
         <Box _hover={{}} ref={btnRef} colorScheme="teal" onClick={onOpen} style={{marginLeft:"40px"}}>
+
+          
          
    
           { isLogin?"User":"Login/signup"}
