@@ -188,14 +188,14 @@ const Navbar = () => {
   const [otp2, setOtp2] = useState(0);
   const [otp3, setOtp3] = useState(0);
   const [otp4, setOtp4] = useState(0);
-  const [cartvalue,setcartvalue]=useState(0)
+  const [cartvalue, setcartvalue] = useState(0)
 
   const [emptyError, setEmptyError] = useState(false);
   const toast = useToast();
 
 
   // another--------------------------------------------------------
- 
+
 
 
   const value = useContext(AuthContext);
@@ -207,25 +207,25 @@ const Navbar = () => {
 
   var details = val.value;
 
- 
 
-  
 
-  useEffect(()=>{
-    const cartdata=JSON.parse(localStorage.getItem("cartData"))||[]
+
+
+  useEffect(() => {
+    const cartdata = JSON.parse(localStorage.getItem("cartData")) || []
     setcartvalue(cartdata.length)
 
-},[])
-    
-   
-    
-  
-    
-  
+  }, [cartvalue])
 
 
 
-  
+
+
+
+
+
+
+
 
   return (
     <div className={styles.container}>
@@ -278,7 +278,7 @@ const Navbar = () => {
             <div>
               <Link to="/rtpcr">RTPCR</Link>
             </div>
-            
+
           </div>
           <Flex marginRight={"2rem"}>
             <Flex className={styles.sidebar}>
@@ -292,16 +292,16 @@ const Navbar = () => {
             <Flex className="loginflex">
 
 
-           
-           
 
 
 
 
 
-            
-              <DrawerLogin/>
-            
+
+
+
+              <DrawerLogin />
+
             </Flex>
             <Flex className={styles.sidebar}></Flex>
 
@@ -312,18 +312,18 @@ const Navbar = () => {
               />
 
               {/* {cartno} */}
-       
-              
 
 
-              
+
+
+
 
               <Link to="/cart">
                 {" "}
                 <Text fontSize="xl" fontWeight="bold">
                   Cart
                   <Badge ml="1" fontSize="0.8em" colorScheme="white">
-                  {/* <Text fontSize="large">{`${cartvalue} Item in cart`}</Text> */}
+                    {/* <Text fontSize="large">{`${cartvalue} Item in cart`}</Text> */}
                     {cartvalue}
                   </Badge>
                 </Text>
@@ -337,3 +337,13 @@ const Navbar = () => {
 };
 
 export { Navbar };
+
+
+
+
+
+
+
+
+
+                    

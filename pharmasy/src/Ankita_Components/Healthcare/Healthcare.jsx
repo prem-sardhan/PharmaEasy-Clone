@@ -10,6 +10,7 @@ import { Achievement } from "./Achievement";
 import { DownLoadApp } from "./DownLoadApp";
 import HealthcareCarousel from "./HealthcareCarousel";
 import Footer from "../Footer/Footer";
+import { CarouselBox } from "../../Lokesh_HomePage/LokeshComponents/CarouselBox";
 
 const categorydata=[{
     "id": 109,
@@ -147,6 +148,7 @@ const Healthcare=()=>{
         <>
             <section className="ankita">
             <HealthcareCarousel  />
+           {/* < CarouselBox/> */}
             </section>
             
             <div>

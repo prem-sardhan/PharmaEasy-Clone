@@ -75,7 +75,7 @@ const Home = () => {
 
             <section className="Home_CarouselBox_second">
                 <p>Payment Offers</p>
-                <CarouselBox_second/>
+                {/* <CarouselBox_second/> */}
             </section>
 
             <section>
