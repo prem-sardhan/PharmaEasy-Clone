@@ -18,11 +18,14 @@ import {
     useToast,
     MenuList,
     MenuItem,
+    Menu,
+    MenuButton,
   } from "@chakra-ui/react";
-  import React, { useState } from "react";
+  import React, { useState ,useContext} from "react";
 import { useEffect } from "react";
   import { RiUser5Fill } from "react-icons/ri";
 import { Link, Navigate ,useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthContext";
 
 
   
@@ -32,10 +35,9 @@ import { Link, Navigate ,useNavigate } from "react-router-dom";
     const [otp, setOtp] = useState("");
     const [isLogin, setLogin] = useState(false);
     const toast=useToast()
+    const value = useContext(AuthContext);
 
-    useEffect(() => {
-      localStorage.setItem('logIn', JSON.stringify(isLogin));
-    }, [isLogin]);
+ 
 
 
     const random = Math.floor(1000 + Math.random() * 9000);
@@ -50,9 +52,15 @@ import { Link, Navigate ,useNavigate } from "react-router-dom";
         ),
       });
       setLogin(true);
+      
     };
     const handleContinue = () => {
       setLogin(true);
+      
+      // AUTH------
+      localStorage.setItem("logIn", true);
+      value.setAuthState(true);
+    
       console.log("clickconti");
      toast({
        position: "top",
@@ -70,7 +78,7 @@ import { Link, Navigate ,useNavigate } from "react-router-dom";
         <Box _hover={{}} ref={btnRef} colorScheme="teal" onClick={onOpen} style={{marginLeft:"40px"}}>
          
    
-          {isLogin?"User":"Login/signup"}
+          { isLogin?"User":"Login/signup"}
 
           
         </Box>
@@ -151,6 +159,9 @@ import { Link, Navigate ,useNavigate } from "react-router-dom";
               <Link  to="/adminlogin">Login as Admin</Link>
             </DrawerBody>
 
+
+            
+
            
   
             <DrawerFooter>
@@ -168,6 +179,46 @@ import { Link, Navigate ,useNavigate } from "react-router-dom";
       </>
     );
   }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 

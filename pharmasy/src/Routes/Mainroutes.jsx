@@ -26,6 +26,10 @@ import OrderMedicines from "../Pages/OrderMedicines/OrderMedicines"
 import RtpcrTest from "../Pages/RtpcrTest/RtpcrTest"
 
 
+
+
+
+
 const Mainroutes = () => {
   return (
     <div>
@@ -35,7 +39,13 @@ const Mainroutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/orderMed" element={<OrderMedicines />} />
         <Route path="/HealthCare" element={<HealthCarePage />} />
-        <Route path="/cart" element={<Cart/>} />
+
+
+
+        <Route path="/cart" element={<Cart />}/>
+
+        
+        {/* <Route path="/cart" element={<Cart/>} /> */}
         <Route path="/labtest" element={<LabTestPage />} />
         <Route path="/product" element={<ProductsPage />} />
         <Route path="/singleproduct" element={<SingleProductPage />} />
@@ -48,6 +58,10 @@ const Mainroutes = () => {
         <Route path="/myprofile" element={<Myprofile/>}/>
         <Route path="/medicalrecord" element={<Medicalrecord/>}/>
         <Route path="/rtpcr" element={<RtpcrTest />} />
+
+
+
+     
       </Routes>
       
      

@@ -1,4 +1,3 @@
-
 import styles from "./navbar.module.css";
 import {
   Box,
@@ -29,6 +28,7 @@ import {
   useDisclosure,
   useToast,
   SimpleGrid,
+  Badge,
 } from "@chakra-ui/react";
 import { ArrowDownIcon, SearchIcon } from "@chakra-ui/icons";
 import SelectPin from "./selectPin";
@@ -42,10 +42,10 @@ import axios from "axios";
 import { json, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import { useEffect } from "react";
-import { useMediaQuery } from '@chakra-ui/react'
-import DrawerLogin from "./DrawerLogin"
+import { useMediaQuery } from "@chakra-ui/react";
+// import { DrawerLogin } from "./DrawerLogin";
 
-
+import DrawerLogin from "./DrawerLogin";
 
 const options = [
   {
@@ -181,8 +181,8 @@ const Navbar = () => {
   const [otp2, setOtp2] = useState(0);
   const [otp3, setOtp3] = useState(0);
   const [otp4, setOtp4] = useState(0);
-  const[cartno, SetCartNo]=useState(0)
- 
+  const [cartno, SetCartNo] = useState(0);
+
   const [emptyError, setEmptyError] = useState(false);
   const toast = useToast();
   const value = useContext(AuthContext);
@@ -195,78 +195,12 @@ const Navbar = () => {
   var details = val.value;
 
   useEffect(() => {
-  
-
-
-    const CartData = JSON.parse(localStorage.getItem("cartData"))||[]
-    SetCartNo(CartData.length)
- 
+    
    
-           
-            
-          
-        
- 
     
-    if (details) {
-      navigate(`/productdetails/${details}`);
-
-    }
-    
-  }, [details]);
-
-  const sendMail = async (mail) => {
-    setLoading(true);
-    try {
-      const res = await axios.post(
-        "https://pharmeasylion.herokuapp.com/api/user/mail",
-        {
-          mail,
-        }
-      );
-      localStorage.setItem("user_id", res.data.id);
-      setOtpState(true);
-      setLoading(false);
-    } catch (err) {
-      setOtpState(false);
-      setLoading(false);
-      toast({
-        title: `Try Again`,
-        status: "error",
-        isClosable: true,
-      });
-    }
-  };
-  const sendOtp = async () => {
-    setLoading(true);
-    try {
-      let otp = "";
-      otp += otp1 + otp2 + otp3 + otp4;
-      const user_id = localStorage.getItem("user_id");
-      const res = await axios.post(
-        `https://pharmeasylion.herokuapp.com/api/user/verify/${user_id}`,
-        { otp: Number(otp) }
-      );
-      if (res.data === "your otp has been verified!") {
-        onClose();
-        setLoading(false);
-        localStorage.setItem("logIn", true);
-        value.setAuthState(true);
-        toast({
-          title: `User LoggedIn successfully`,
-          status: "success",
-          isClosable: true,
-        });
-      }
-    } catch (err) {
-      toast({
-        title: `Otp is Wrong`,
-        status: "error",
-        isClosable: true,
-      });
-      setLoading(false);
-    }
-  };
+    const CartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    SetCartNo(CartData.length);
+  }, [cartno]);
 
   return (
     <div className={styles.container}>
@@ -275,22 +209,20 @@ const Navbar = () => {
           navigate("/");
         }}
       >
-        <img className=""
+        <img
+          className=""
           src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"
           alt=""
         />
       </div>
 
       <div>
-       
         <div>
-       
           <InputGroup size="lg" width={"75%"}>
             <InputLeftAddon children={<SelectPin />} />
 
-           
-
-            <div className={styles.serach}
+            <div
+              className={styles.serach}
               style={{ width: "40rem", height: "3rem", objectFit: "contain" }}
             >
               <Select
@@ -302,14 +234,14 @@ const Navbar = () => {
                 styles={customStyles}
               />
             </div>
-           
+
             <InputRightAddon children={<SearchIcon h={8} color="gray.500" />} />
           </InputGroup>
         </div>
-      
+
         <div className={styles.tabContainer}>
-          <div >
-            <div >
+          <div>
+            <div>
               <Link to="/orderMed">Order Medicines</Link>
             </div>
             <div>
@@ -330,24 +262,34 @@ const Navbar = () => {
               />
               <p style={{ color: "white" }}>Offers</p>
             </Flex>
+            {/* login---------------------------------- */}
             <Flex className="loginflex">
-             
               <DrawerLogin/>
             </Flex>
-            <Flex className={styles.sidebar}>
-             
-            </Flex>
+            <Flex className={styles.sidebar}></Flex>
 
             <Flex className={styles.sidebar}>
               <HiShoppingCart
-                style={{ marginTop: "0.2rem", marginRight: "0.4rem", }}
+                style={{ marginTop: "0.2rem", marginRight: "0.4rem" }}
                 size="23px"
-
-               
               />
-             {cartno}
-             
-              <Link to="/cart">Cart</Link>
+
+              {/* {cartno} */}
+       
+              
+
+
+              
+
+              <Link to="/cart">
+                {" "}
+                <Text fontSize="xl" fontWeight="bold">
+                  Cart
+                  <Badge ml="1" fontSize="0.8em" colorScheme="white">
+                    {cartno}
+                  </Badge>
+                </Text>
+              </Link>
             </Flex>
           </Flex>
         </div>
@@ -357,239 +299,3 @@ const Navbar = () => {
 };
 
 export { Navbar };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// profile section after login---------------------------
-
-
- {/* <RiUser5Fill
-                style={{ marginTop: "0.2rem", marginRight: "0.4rem" }}
-                size="23px"
-              /> */}
-              {/* <Menu>
-                <MenuButton
-                  style={{ cursor: "pointer", color: "white" }}
-                  ref={btnRef}
-                  onClick={onOpen}
-                >
-                  {value.authState ? "User" : "Login / Signup"}
-                </MenuButton>
-                {value.authState ? (
-                  <>
-                    <MenuList>
-                      <MenuItem
-                        onClick={() => navigate("/myorders")}
-                        color="black"
-                        _hover={{ color: "teal.500" }}
-                      >
-                        My Orders
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => navigate("/myrefills")}
-                        color="black"
-                        _hover={{ color: "teal.500" }}
-                      >
-                        My Refills
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => navigate("/medicalrecord")}
-                        color="black"
-                        _hover={{ color: "teal.500" }}
-                      >
-                        Medical Records
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => navigate("/myprofile")}
-                        color="black"
-                        _hover={{ color: "teal.500" }}
-                      >
-                        My Profile
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => navigate("/wallet")}
-                        color="black"
-                        _hover={{ color: "teal.500" }}
-                      >
-                        Wallet
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => navigate("/refer")}
-                        color="black"
-                        _hover={{ color: "teal.500" }}
-                      >
-                        Refer & Earn
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => navigate("/")}
-                        color="black"
-                        _hover={{ color: "teal.500" }}
-                      >
-                        Notification
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          localStorage.removeItem("user_id");
-                          localStorage.removeItem("logIn");
-                          value.setAuthState(false);
-                        }}
-                        color="black"
-                        _hover={{ color: "teal.500" }}
-                      >
-                        Log Out
-                      </MenuItem>
-                    </MenuList>
-                  </>
-                ) : (
-                  <Drawer
-                    isOpen={isOpen}
-                    placement="right"
-                    onClose={onClose}
-                    size="sm"
-                    finalFocusRef={btnRef}
-                  >
-                    <DrawerOverlay />
-                    <DrawerContent>
-                      <DrawerCloseButton />
-                      <DrawerHeader>
-                        <Flex bg="teal.500" height="100px">
-                          <Box marginTop={"1rem"} marginLeft={"1rem"}>
-                            <Image
-                              src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"
-                              alt=""
-                              width={"10rem"}
-                            />
-                          </Box>
-
-                          <Box marginTop={"1rem"} marginLeft={"3rem"}>
-                            <Image
-                              src="	https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg"
-                              alt=""
-                              width={"8rem"}
-                            />
-                          </Box>
-                        </Flex>
-                      </DrawerHeader>
-                      {otpState ? (
-                        <DrawerBody>
-                          <Heading size="md">Enter OTP sent to {email}</Heading>
-                          <br />
-
-                          <HStack>
-                            <PinInput size="lg">
-                              <PinInputField
-                                onChange={(e) => setOtp1(e.target.value)}
-                              />
-                              <PinInputField
-                                onChange={(e) => setOtp2(e.target.value)}
-                              />
-                              <PinInputField
-                                onChange={(e) => setOtp3(e.target.value)}
-                              />
-                              <PinInputField
-                                onChange={(e) => setOtp4(e.target.value)}
-                              />
-                            </PinInput>
-                          </HStack>
-                          <Button
-                            onClick={() => {
-                              let otp = "";
-                              otp += otp1 + otp2 + otp3 + otp4;
-                              if (otp !== "") {
-                                sendOtp();
-                              } else {
-                                setEmptyError(true);
-                              }
-                            }}
-                            isLoading={loading ? true : false}
-                            colorScheme="teal"
-                            size="lg"
-                            style={{ marginTop: "1rem" }}
-                            width={"25rem"}
-                          >
-                            Submit
-                          </Button>
-                        </DrawerBody>
-                      ) : (
-                        <DrawerBody>
-                          <Heading size="md"> Quick Login / Register</Heading>
-                          <br />
-                          <InputGroup>
-                            <InputLeftAddon children={<FiMail />} />
-                            <Input
-                              type="email"
-                              required
-                              isInvalid={emptyError ? true : false}
-                              errorBorderColor={emptyError ? "red.300" : ""}
-                              placeholder="Email"
-                              onChange={(e) => setEmail(e.target.value)}
-                            />
-                          </InputGroup>
-                          <br />
-                          <Button
-                            onClick={() => {
-                              if (email !== "") {
-                                sendMail(email);
-                              } else {
-                                setEmptyError(true);
-                              }
-                            }}
-                            isLoading={loading ? true : false}
-                            colorScheme="teal"
-                            size="lg"
-                            width={"25rem"}
-                          >
-                            Send Otp
-                          </Button>
-                          <br />
-                          <br />
-                          <Text fontSize="sm" color="teal.500">
-                            By clicking continue, you agree with our Privacy
-                            Policy
-                          </Text>
-
-                          <Link  to="/adminlogin">Login as Admin</Link>
-                        </DrawerBody>
-                      )}
-                    </DrawerContent>
-                  </Drawer>
-                )}
-              </Menu> */}

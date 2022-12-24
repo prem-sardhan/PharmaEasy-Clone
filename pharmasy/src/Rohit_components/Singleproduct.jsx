@@ -1,5 +1,5 @@
 import "./singleproduct.css"
-import { Box, Image, Text,Button, Divider , useToast} from "@chakra-ui/react";
+import { Box, Image, Text,Button, Divider , useToast, Stack, AlertIcon} from "@chakra-ui/react";
 import { useState ,useEffect} from "react";
 import { compose } from "redux";
 
@@ -35,6 +35,7 @@ setbrand(temp)
 
    
   if(ispresent()){
+    // alert("Already in cart")
     toast({
       title: "Product is already in cart",
       position: "top",
@@ -53,6 +54,9 @@ return
     isClosable: true,
     status:"success"
   })
+ 
+  
+  
   setcartvalue(cartvalue+1)
   
     
