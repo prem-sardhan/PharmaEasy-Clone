@@ -29,6 +29,9 @@ import {
   useToast,
   SimpleGrid,
   Badge,
+  IconButton,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
 import { ArrowDownIcon, SearchIcon } from "@chakra-ui/icons";
 import SelectPin from "./selectPin";
@@ -43,7 +46,11 @@ import { json, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import { useEffect } from "react";
 import { useMediaQuery } from "@chakra-ui/react";
-// import { DrawerLogin } from "./DrawerLogin";
+
+
+
+
+
 
 import DrawerLogin from "./DrawerLogin";
 
@@ -181,10 +188,16 @@ const Navbar = () => {
   const [otp2, setOtp2] = useState(0);
   const [otp3, setOtp3] = useState(0);
   const [otp4, setOtp4] = useState(0);
-  const [cartno, SetCartNo] = useState(0);
+  const [cartvalue,setcartvalue]=useState(0)
 
   const [emptyError, setEmptyError] = useState(false);
   const toast = useToast();
+
+
+  // another--------------------------------------------------------
+ 
+
+
   const value = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -194,13 +207,25 @@ const Navbar = () => {
 
   var details = val.value;
 
-  useEffect(() => {
+ 
+
+  
+
+  useEffect(()=>{
+    const cartdata=JSON.parse(localStorage.getItem("cartData"))||[]
+    setcartvalue(cartdata.length)
+
+},[])
     
    
     
-    const CartData = JSON.parse(localStorage.getItem("cartData")) || [];
-    SetCartNo(CartData.length);
-  }, [cartno]);
+  
+    
+  
+
+
+
+  
 
   return (
     <div className={styles.container}>
@@ -253,6 +278,7 @@ const Navbar = () => {
             <div>
               <Link to="/rtpcr">RTPCR</Link>
             </div>
+            
           </div>
           <Flex marginRight={"2rem"}>
             <Flex className={styles.sidebar}>
@@ -262,9 +288,20 @@ const Navbar = () => {
               />
               <p style={{ color: "white" }}>Offers</p>
             </Flex>
-            {/* login---------------------------------- */}
+            {/* login------------------------------------------------------------------------ */}
             <Flex className="loginflex">
+
+
+           
+           
+
+
+
+
+
+            
               <DrawerLogin/>
+            
             </Flex>
             <Flex className={styles.sidebar}></Flex>
 
@@ -286,7 +323,8 @@ const Navbar = () => {
                 <Text fontSize="xl" fontWeight="bold">
                   Cart
                   <Badge ml="1" fontSize="0.8em" colorScheme="white">
-                    {cartno}
+                  {/* <Text fontSize="large">{`${cartvalue} Item in cart`}</Text> */}
+                    {cartvalue}
                   </Badge>
                 </Text>
               </Link>

@@ -1,7 +1,14 @@
 import "./singleproduct.css"
+import {
+  Alert,
+  
+  AlertTitle,
+  AlertDescription,
+} from '@chakra-ui/react'
 import { Box, Image, Text,Button, Divider , useToast, Stack, AlertIcon} from "@chakra-ui/react";
 import { useState ,useEffect} from "react";
-import { compose } from "redux";
+// import { compose } from "redux";
+// import { spacing } from "react-select/dist/declarations/src/theme";
 
 
 
@@ -18,6 +25,9 @@ let temp=localStorageData.title.split(" ")
 setbrand(temp)
 },[])
  const { img1, title, mrp, strike, discount } = product;
+
+
+ 
 
 
 
@@ -47,13 +57,25 @@ return
 
   let newdata=[...cartdata,product]
   localStorage.setItem("cartData",JSON.stringify(newdata))
-
   toast({
     title: "Item added to cart",
     position: "top",
     isClosable: true,
     status:"success"
   })
+
+ 
+   
+
+
+  
+
+
+ 
+
+  
+
+  
  
   
   

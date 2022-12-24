@@ -30,6 +30,7 @@ import RtpcrTest from "../Pages/RtpcrTest/RtpcrTest"
 
 
 
+
 const Mainroutes = () => {
   return (
     <div>
@@ -43,6 +44,7 @@ const Mainroutes = () => {
 
 
         <Route path="/cart" element={<Cart />}/>
+       
 
         
         {/* <Route path="/cart" element={<Cart/>} /> */}
