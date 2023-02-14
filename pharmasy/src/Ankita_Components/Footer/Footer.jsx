@@ -4,6 +4,7 @@ import { Categories, Company, NeedHelp, OurServices, Partners, PolicyInfo } from
 import styles from "./footer.module.css"
 import MediaQuery from 'react-responsive'
 import {BsFacebook,BsInstagram,BsYoutube,BsTwitter} from "react-icons/bs"
+import { Visa,AmazonTransparent,Googlepay,Mastercard,PaypalTransparent} from "react-pay-icons";
 const Footer = () => {
    
   return (
@@ -49,7 +50,7 @@ const Footer = () => {
         </SimpleGrid>
         </MediaQuery>
         <MediaQuery minWidth={580} maxWidth={879}>
-        <SimpleGrid columns={2} spacing={10}>
+        <SimpleGrid columns={3} spacing={10}>
             <Box gap="10px" >
                 <Text fontSize="16px" fontWeight="700">Company</Text>
                 {Company.map((el,i) => (
@@ -96,7 +97,7 @@ const Footer = () => {
         </MediaQuery>
         
         <MediaQuery minWidth={1} maxWidth={579}>
-        <SimpleGrid columns={1}>
+        <SimpleGrid columns={2}>
             <Box gap="10px" >
                 <Text fontSize="16px" fontWeight="700">Company</Text>
                 {Company.map((el,i) => (
@@ -141,69 +142,26 @@ const Footer = () => {
             </Box>
         </SimpleGrid>
         </MediaQuery>
-        <MediaQuery minWidth={1000} maxWidth={2000}>
+        
         <Stack gap="10px" marginBottom="40px" marginTop="60px" >
+
+            
                 <Text fontSize="16px" fontWeight="700">Our Payment Partners</Text>
-                <Stack   direction="horizontal">
-                    <SimpleGrid columns={10}>
-                    {Partners.map((el,i) => (
-                       
-                        <Image key={i}  src={el.img} alt="none" width="50px" height="40px"  margin="0px 10px" />
-                       
-                        ))}
-                    </SimpleGrid>
-                    <Text  marginLeft="100px" fontSize="14px">© 2022 PharmEasy. All Rights Reserved</Text>
-                </Stack>
+                 
+        <Box display="flex" alignContent="center" justifyContent="center" alignItems="center"> 
+<Visa style={{ margin: 10, width:"10vw" }} />
+
+<AmazonTransparent style={{ margin: 10, width: "10vw" }} />
+<Googlepay style={{ margin: 10, width:"5vw" }} />
+
+<PaypalTransparent style={{ margin: 10, width: "10vw" }} />
+<Mastercard style={{ margin: 10, width: "10vw" }} />
+</Box>
+
+
         </Stack>
-        </MediaQuery>
-        <MediaQuery minWidth={680} maxWidth={999}>
-        <Stack gap="10px" marginBottom="40px" marginTop="60px" >
-                <Text fontSize="16px" fontWeight="700">Our Payment Partners</Text>
-                <Stack   direction="horizontal">
-                    <SimpleGrid columns={5} spacing={10}>
-                    {Partners.map((el,i) => (
-                       
-                        <Image key={i}  src={el.img} alt="none" width="50px" height="40px"  margin="0px 10px" />
-                       
-                        ))}
-                    </SimpleGrid>
-                    
-                </Stack>
-                <Text fontSize="14px">© 2022 PharmEasy. All Rights Reserved</Text>
-        </Stack>
-        </MediaQuery>
-        <MediaQuery minWidth={400} maxWidth={679}>
-        <Stack gap="10px" marginBottom="40px" marginTop="60px" >
-                <Text fontSize="16px" fontWeight="700">Our Payment Partners</Text>
-                <Stack   direction="horizontal">
-                    <SimpleGrid columns={3} spacing={10}>
-                    {Partners.map((el,i) => (
-                       
-                        <Image key={i}  src={el.img} alt="none" width="50px" height="40px"  margin="0px 10px" />
-                       
-                        ))}
-                    </SimpleGrid>
-                   
-                </Stack>
-                <Text fontSize="14px">© 2022 PharmEasy. All Rights Reserved</Text>
-        </Stack>
-        </MediaQuery>
-        <MediaQuery minWidth={1} maxWidth={399}>
-        <Stack gap="10px" marginBottom="40px" marginTop="60px" >
-                <Text fontSize="16px" fontWeight="700">Our Payment Partners</Text>
-                <Stack   direction="horizontal">
-                    <SimpleGrid columns={2} spacing={10}>
-                    {Partners.map((el,i) => (
-                       
-                        <Image key={i}  src={el.img} alt="none" width="50px" height="40px"  margin="0px 10px" />
-                       
-                        ))}
-                    </SimpleGrid>
-                  
-                </Stack>
-                <Text fontSize="14px">© 2022 PharmEasy. All Rights Reserved</Text>
-        </Stack>
-        </MediaQuery>
+      
+       
     </div>
   )
 }

@@ -59,7 +59,7 @@ const Navbar_Update = () => {
             {/* ------------------------------------------------------------------------------------------- */}
 
 
-            <div className="mainNavbarBox" style={{ width: "100%", height: "100vh" }}>
+            <div className="mainNavbarBox" style={{ width: "100%"}}>
                 <div className="burgerNav">
                     <div className="burger-menu" onClick={updateMenu}>
                         <div className={burger_class}></div>

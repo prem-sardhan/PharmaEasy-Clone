@@ -29,6 +29,7 @@ import {
   useDisclosure,
   useToast,
   SimpleGrid,
+  Toast,
 } from "@chakra-ui/react";
 import { ArrowDownIcon, SearchIcon } from "@chakra-ui/icons";
 import SelectPin from "./selectPin";
@@ -43,6 +44,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import { useEffect } from "react";
 import { useMediaQuery } from '@chakra-ui/react'
+import backend_url from "../../backendurl";
+
 
 
 const options = [
@@ -169,9 +172,13 @@ const customStyles = {
   }),
 };
 const Navbar = () => {
+   const { isAuth, toggleAuth } = useContext(AuthContext);
   const [val, setVal] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [email, setEmail] = useState("");
+  const [credentials, setCredentials] = useState({
+    "Email":"",
+    "Password":""
+  });
   const btnRef = useRef();
   const [otpState, setOtpState] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -183,6 +190,112 @@ const Navbar = () => {
   const toast = useToast();
   const value = useContext(AuthContext);
   const navigate = useNavigate();
+
+
+
+  const HandleInputChange=(e)=>{
+let {value,name}=e.target
+
+
+setCredentials({
+  ...credentials,[name]:value
+})
+  }
+
+  const HangleLogin=async()=>{
+if(!credentials.Email|| !credentials.Password)return toast({
+  title:"Fill The Credentials Correctly",
+  status:"error",
+  position:"top"
+})
+
+setLoading(true)
+try{
+  
+  axios.post(`${backend_url}/login`,credentials).then((res)=>{
+  const {token,Type}=res.data
+  if(token){
+    if(Type=="USER"){
+      toast({
+        title:"LOGIN SUCCESSFULL",
+        status:"success",
+        position:"top"
+      })
+
+    }else if(Type=="ADMIN"){
+      toast({
+        title:"WELCOME ADMIN",
+        status:"success",
+        position:"top"
+      })
+
+toggleAuth()
+      navigate("/adminpage")
+
+    }
+
+    onClose();
+    localStorage.setItem("logIn", true);
+   
+    value.setAuthState(true);
+
+
+
+  }else{
+    toast({
+      title:res.data.msg,
+      status:"error",
+      position:"top"
+    })
+  }
+  setLoading(false);
+  })
+  
+  }catch(err){
+  toast({
+    position:"top",
+    status:"error",
+    title:"Something Went Wrong Please Try Again"
+  })
+  }
+  
+  setLoading(false)
+ }
+
+
+
+  const  handleSignup=async()=>{
+
+    if(!credentials.Email|| !credentials.Password)return toast({
+      title:"Fill The Credentials Correctly",
+      status:"error",
+      position:"top"
+    })
+try{
+setLoading(true)
+axios.post(`${backend_url}/signup`,credentials).then((res)=>{
+const responseMessage=res.data.msg
+toast({position:"top",
+title:responseMessage,
+status:"info"
+})
+setLoading(false);
+})
+
+}catch(err){
+toast({
+  position:"top",
+  status:"error",
+  title:"Something Went Wrong Please Try Again"
+})
+}
+
+setLoading(false)
+      
+  }
+  
+
+
 
   const handleChange = (values) => {
     setVal(values);
@@ -196,28 +309,33 @@ const Navbar = () => {
     }
   }, [details]);
 
-  const sendMail = async (mail) => {
-    setLoading(true);
-    try {
-      const res = await axios.post(
-        "https://pharmeasylion.herokuapp.com/api/user/mail",
-        {
-          mail,
-        }
-      );
-      localStorage.setItem("user_id", res.data.id);
-      setOtpState(true);
-      setLoading(false);
-    } catch (err) {
-      setOtpState(false);
-      setLoading(false);
-      toast({
-        title: `Try Again`,
-        status: "error",
-        isClosable: true,
-      });
-    }
-  };
+
+
+
+  // const sendMail = async (mail) => {
+  //   setLoading(true);
+  //   try {
+  //     const res = await axios.post(
+  //       "https://pharmeasylion.herokuapp.com/api/user/mail",
+  //       {
+  //         mail,
+  //       }
+  //     );
+  //     localStorage.setItem("user_id", res.data.id);
+  //     setOtpState(true);
+  //     setLoading(false);
+  //   } catch (err) {
+  //     setOtpState(false);
+  //     setLoading(false);
+  //     toast({
+  //       title: `Try Again`,
+  //       status: "error",
+  //       isClosable: true,
+  //     });
+  //   }
+  // };
+  
+  
   const sendOtp = async () => {
     setLoading(true);
     try {
@@ -248,6 +366,9 @@ const Navbar = () => {
       setLoading(false);
     }
   };
+
+
+
 
   return (
     <div className={styles.container}>
@@ -322,7 +443,7 @@ const Navbar = () => {
                   ref={btnRef}
                   onClick={onOpen}
                 >
-                  {value.authState ? "User" : "Login / Signup"}
+                  {value.authState ? "Profile" : "Login / Signup"}
                 </MenuButton>
                 {value.authState ? (
                   <>
@@ -421,7 +542,7 @@ const Navbar = () => {
                       </DrawerHeader>
                       {otpState ? (
                         <DrawerBody>
-                          <Heading size="md">Enter OTP sent to {email}</Heading>
+                          <Heading size="md">Enter OTP sent to </Heading>
                           <br />
 
                           <HStack>
@@ -463,41 +584,63 @@ const Navbar = () => {
                         <DrawerBody>
                           <Heading size="md"> Quick Login / Register</Heading>
                           <br />
-                          <InputGroup>
-                            <InputLeftAddon children={<FiMail />} />
+                          
+      
                             <Input
                               type="email"
+                              name="Email"
                               required
                               isInvalid={emptyError ? true : false}
                               errorBorderColor={emptyError ? "red.300" : ""}
                               placeholder="Email"
-                              onChange={(e) => setEmail(e.target.value)}
+                              onChange={HandleInputChange}
                             />
-                          </InputGroup>
+
+                            <Input
+                            mt="5%"
+                              type="password"
+                              name="Password"
+                              required
+                              isInvalid={emptyError ? true : false}
+                              errorBorderColor={emptyError ? "red.300" : ""}
+                              placeholder="Password"
+                              onChange={HandleInputChange}
+                            />
+
+                          
                           <br />
                           <Button
-                            onClick={() => {
-                              if (email !== "") {
-                                sendMail(email);
-                              } else {
-                                setEmptyError(true);
-                              }
-                            }}
-                            isLoading={loading ? true : false}
+                            mt="5%"
+                            onClick={ 
+                             
+                              HangleLogin
+                            }
+                            isLoading={loading}
                             colorScheme="teal"
                             size="lg"
                             width={"25rem"}
                           >
-                            Send Otp
+                           LOGIN
                           </Button>
                           <br />
                           <br />
+
+                           <Text color="gray" >
+                            New On Website? <span
+                            onClick={handleSignup}
+                            
+                            style={{color:"blue",cursor:"pointer",textDecoration:"underline",fontWeight:"bolder"}}>SignUP</span>
+                           </Text>
+
+                           <br />
+                          <br />
+
                           <Text fontSize="sm" color="teal.500">
                             By clicking continue, you agree with our Privacy
                             Policy
                           </Text>
 
-                          <Link  to="/adminlogin">Login as Admin</Link>
+                         
                         </DrawerBody>
                       )}
                     </DrawerContent>

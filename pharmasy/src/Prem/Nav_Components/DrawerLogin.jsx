@@ -27,8 +27,10 @@ import {
     const [isLogin, setLogin] = useState(false);
     const toast=useToast()
     const random = Math.floor(1000 + Math.random() * 9000);
+
+
+
     const handleSend = () => {
-      console.log(random);
       toast({
         position: "top",
         render: () => (
@@ -39,6 +41,10 @@ import {
       });
       setLogin(true);
     };
+
+
+
+
     const handleContinue = () => {
       setLogin(true);
       console.log("clickconti");
@@ -53,6 +59,12 @@ import {
      
      setOtp("")
     };
+
+
+
+
+
+
     return (
       <>
         <Box _hover={{}} ref={btnRef} colorScheme="teal" onClick={onOpen}>
@@ -82,57 +94,12 @@ import {
               <Text pb={8} color={"grey"} fontWeight={600}>
                 Quick Login / Register
               </Text>
-              {isLogin ? (
-                <>
-                  {" "}
-                  <Flex margin={"auto"} width={"360px"} gap={5}>
-                    <PinInput otp>
-                      <PinInputField />
-                      <PinInputField />
-                      <PinInputField />
-                      <PinInputField />
-                    </PinInput>
-                    <br />
-                  </Flex>
-                  <Button
-                    mt={5}
-                    ml={8}
-                    width={"200px"}
-                    color={"white"}
-                    _hover={{ background: "#10847e" }}
-                    background={"#10847e"}
-                    onClick={handleContinue}
-                  >
-                    Continue
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Input
-                    value={otp}
-                    onChange={(e) => setOtp(e.target.value)}
-                    mt={10}
-                    placeholder="Enter your phone number"
-                  />
-                  <Button
-                    disabled={otp === ""}
-                    onClick={handleSend}
-                    mt={5}
-                    width={"400px"}
-                    color={"white"}
-                    _hover={{ background: "#10847e" }}
-                    background={"#10847e"}
-                  >
-                    Send OTP
-                  </Button>
-                </>
-              )}
   
               <Text mt={5} fontSize={12}>
                 By clicking on continue you agree with our Privacy Policy
               </Text>
             </DrawerBody>
-  
+            
             <DrawerFooter>
               <Button variant="outline" mr={3} onClick={onClose}>
                 Cancel

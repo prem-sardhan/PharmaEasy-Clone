@@ -53,7 +53,7 @@ import {
 
      
       toast({
-        title: "Order Placed Successfully ,Thank You For the Shopping",
+        title: "Booking Successfully ,Thank You Choosing us",
         position: "top",
         isClosable: true,
         status:"success"
@@ -76,12 +76,10 @@ navigate("/")
 
 <PaypalTransparent style={{ margin: 10, width: 100 }} />
 <Mastercard style={{ margin: 10, width: 100 }} />
-
-
-
-
-
 </Box>
+
+
+
 <Heading>Payment</Heading>
 <Box width="50%">
  {!otp &&  <Stack spacing={8}> 

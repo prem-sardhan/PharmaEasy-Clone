@@ -11,7 +11,11 @@ const Products = ({ data }) => {
 useEffect(() => {
 
 
-
+  window.scrollTo({
+    top: 0,
+    left: 100,
+    behavior: 'smooth'
+  });
 
 }, [productdata]);
 

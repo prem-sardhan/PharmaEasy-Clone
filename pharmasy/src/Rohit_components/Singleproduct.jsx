@@ -1,21 +1,38 @@
 import "./singleproduct.css"
 import { Box, Image, Text,Button, Divider , useToast} from "@chakra-ui/react";
 import { useState ,useEffect} from "react";
-import { compose } from "redux";
-
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import backend_url from "../backendurl";
 
 
 const SingleProduct = ({cartvalue,setcartvalue}) => {
 const toast=useToast()
 const [product,setproductdata]=useState({})
 const [brand,setbrand]=useState([])
+const{ID}=useParams()
+
+
+async function getsingleProduct(){
+
+axios.get(`${backend_url}/products/${ID}`).then((res)=>{
+setproductdata(res.data)
+
+let temp=product.title.split(" ")
+setbrand(temp)
+})
+
+}
 
 useEffect(()=>{
-const localStorageData=JSON.parse(localStorage.getItem("singleProductdata"))
-setproductdata(localStorageData)
+  window.scrollTo({
+    top: 0,
+    left: 100,
+    behavior: 'smooth'
+  });
 
-let temp=localStorageData.title.split(" ")
-setbrand(temp)
+getsingleProduct()
+
 },[])
  const { img1, title, mrp, strike, discount } = product;
 
