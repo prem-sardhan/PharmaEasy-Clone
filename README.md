@@ -1,8 +1,8 @@
-# electric-school-1726
-## Welcome to Holistic Remedies
+
+# Welcome to Holistic Remedies
 Holistic Remedies is one of top leading and trusted company, which provides Healthcare, diagonistic and personal care products. Started with the sole purpose of making healthcare accessible and affordable to all everyone
 
-## [Deployed URL](https://shimmering-moonbeam-540cbd.netlify.app/)
+## [Deployed URL](https://holistic-remedies.netlify.app//)
 
 
 ## Home Page:
