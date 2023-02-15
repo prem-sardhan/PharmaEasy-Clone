@@ -7,7 +7,7 @@ const PreviouslyBrowsedItems = () => {
             <p className="Home_PreviouslyBrowsedItems-p">Previously Browsed Items</p>
             <div className="Home_PreviouslyBrowsedItems">
                 <div className="Home_PreviouslyBrowsedItems_Item">
-                    <Link to="/">
+                    <Link to="/product">
                         <div>
                             <img src="https://cdn01.pharmeasy.in/dam/products_otc/I47396/kabibite-mango-diskettes-jar-of-250-g-2-1655290831.jpg?dim=1440x0" alt="" />
                         </div>
@@ -21,7 +21,7 @@ const PreviouslyBrowsedItems = () => {
                 </div>
 
                 <div className="Home_PreviouslyBrowsedItems_Item">
-                    <Link to="/">
+                    <Link to="/product">
                         <div>
                             <img src="https://cdn01.pharmeasy.in/dam/products_otc/P45095/pharmeasy-biotin-gummies-pack-of-60-2-1666783958.jpg?dim=1440x0" alt="" />
                         </div>
@@ -34,7 +34,7 @@ const PreviouslyBrowsedItems = () => {
                 </div>
 
                 <div className="Home_PreviouslyBrowsedItems_Item">
-                    <Link to="/">
+                    <Link to="/product">
                         <div>
                             <img src="https://cdn01.pharmeasy.in/dam/products_otc/U09552/nyumi-happy-hair-gummies-lush-strawberry-flavour-50-gummies-2-1641792173.jpg" alt="" />
                         </div>
@@ -47,7 +47,7 @@ const PreviouslyBrowsedItems = () => {
                 </div>
 
                 <div className="Home_PreviouslyBrowsedItems_Item">
-                    <Link to="/">
+                    <Link to="/product">
                         <div>
                             <img src="https://cdn01.pharmeasy.in/dam/products_otc/T18833/everherb-by-pharmeasy-amla-immunity-booster-capsules-natural-vitamin-c-bottle-of-60-2-1661863079.jpg" alt="" />
                         </div>
@@ -60,7 +60,7 @@ const PreviouslyBrowsedItems = () => {
                 </div>
 
                 <div className="Home_PreviouslyBrowsedItems_Item">
-                    <Link to="/">
+                    <Link to="/product">
                         <div>
                             <img src="https://cdn01.pharmeasy.in/dam/products_otc/K99156/saffola-fittify-whey-protein-peanut-butter-dark-chocolaty-extra-crunchy-200g-jar-2-1647515654.jpg" alt="" />
                         </div>

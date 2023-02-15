@@ -22,6 +22,8 @@
     top: -330px;
     left: 34%;
     width: 30%;
+    display: block;
+    text-align: center;
 }
 
 .home_unknown_section-container > div > h2{

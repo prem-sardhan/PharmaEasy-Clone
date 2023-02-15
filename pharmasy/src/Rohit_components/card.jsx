@@ -15,7 +15,7 @@ const StoreAtLocalStorage=()=>{
 
 
   return (
-    <Link  _hover={{}} to="/singleproduct"><Box
+    <Link  to={`/singleproduct/${ele._id}`}><Box
     h="300px"
     w="231px"
     padding="20px 10px"
@@ -27,7 +27,7 @@ const StoreAtLocalStorage=()=>{
       border: "1.5px solid #0b8e87",
       transition: "all 0.5s ease",
       transform: "translateY(-3px)",
-      boxShadow: " rgba(17, 17, 26, 0.2) 0px 10px 16px",}} onClick={StoreAtLocalStorage}>
+      boxShadow: " rgba(17, 17, 26, 0.2) 0px 10px 16px",}}>
       <div
       id="card-img-div"
         style={{
